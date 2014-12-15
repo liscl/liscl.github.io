@@ -1,0 +1,323 @@
+/* Copyright:Lisa Clemens
+October 2014 */
+
+body {
+	font-family: Calibri, Courier;
+	background-color: #d9d9d9;
+	background-attachment: fixed;
+	background-size: cover;
+	background-position: center;	
+}
+
+#Gesamtinhalt {
+	position: relative;
+	width: 1000px;
+	background-color: white;
+	margin-left: auto; 
+	margin-right: auto;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	display: block;
+	border: 1px solid #ccc;
+	border-radius: 15px;
+	border-bottom: 1px solid #ccc;
+} 
+
+#Kopfleiste {
+	width: 1000px;
+	height: 57px;
+	border-bottom: 1px solid #ccc;
+} 
+
+.header {
+	font-family: Verdana, Arial;
+	font-size: 16px;
+	margin-top: 20px;
+	margin-bottom: 5px;
+	margin-left: 90px;
+	text-align: left;	
+}
+
+#language {
+	width: 740px;
+	height: 0px;
+	margin-left: auto;
+	margin-right: 70px;
+	padding: 10px 0px 0px 20px;
+} 
+
+#Hauptinhalt {
+	width: 900px;
+	height: 670px;
+	margin: 25px 2px 20px 85px;
+	position: relative;
+}
+
+#Hauptinhalt_About {
+	width: 840px;
+	height: 980px;
+	margin: 25px 2px 20px 80px;
+	position: relative;
+}
+
+#Hauptinhalt_Contact {
+	width: 740px;
+	height: 200px;
+	margin: 25px 2px 20px 80px;
+	position: relative;
+}
+
+#Fussleiste {
+width: 900px;
+   
+	padding: 10px 0px 10px 10px;
+}
+
+#Fussleiste_home {
+width: 900px;
+   
+	padding: 10px 0px 10px 100px;
+}
+
+iframe {
+position: relative;
+left: 100px;
+width:600px;
+height:440px;
+scrolling:no;
+marginheight:0px;
+marginwidth:0px;
+padding:3px;
+box-shadow: 2px 4px 6px 0px rgba(50, 50, 50, 0.5);
+}
+
+.Inhalt {
+width: 800px;
+	margin-bottom: 30px;
+	text-align: justify;
+	margin-left: 12px;
+	margin-right: 13px;
+}
+
+.Navigation {	
+	width: auto;
+	display: inline-block;
+	margin-top: 10px;
+	margin-left: 90px;
+	margin-bottom: -1px;
+}
+
+
+.links {
+	font-size: 14px;
+	color: #4d9221;
+	text-decoration: none; 
+	text-underline: none; 
+}
+
+.Item1 {
+	display: inline-block;
+	background-color: #d3d3d3;
+	border-left: 1px solid #ccc;
+	border-top: 1px solid #ccc;
+	border-right: 1px solid #ccc;
+	border-bottom: 0px solid #7fbc41;
+	padding: 3px 10px 3px 10px;
+	font-size: 14px;
+	color: #CCFF99;
+}
+
+
+.Item2 {
+	float:right;
+	padding: 3px 23px 3px 10px;
+	font-size: 13px;
+} 
+
+.Item2 a:link {
+	text-decoration: none;
+	color: #737373;
+}
+
+.Item2 a:hover {
+	text-decoration: none;
+	color: black;
+}
+
+.Item2 a:visited{
+	color: black;
+}
+
+.Item {
+	display: inline-block;
+	border-left: 1px solid #ccc;
+	border-top: 1px solid #ccc;
+	border-right: 1px solid #ccc;
+	padding: 3px 10px 3px 10px;
+	font-size: 14px;
+	background-color: #7fbc41;
+	color: black;
+}
+
+.Item2 a [href] {
+	color: #d9d9d9;
+}
+
+.Item1 a[href] {
+	color: #d3d3d3;
+}
+
+.Item a[href] {
+	color: black;
+}
+
+.Navigation a:link {
+	text-decoration: none;
+}
+
+.Navigation a:hover {
+	text-decoration: none;
+	color: black;
+}
+
+.Navigation a:visited{
+	color: black;
+}
+
+.Item:hover {
+	text-decoration: none;
+	background-color: #d3d3d3;
+}
+
+.galerie_img
+ {
+ width: 200px;
+ height: 155px;
+ display: block;
+ } 
+ 
+ .img_social
+ {
+ float:left;
+ width: 24px;
+ height: 24px;
+ display: block;
+ padding: 5px;
+ } 
+ 
+  .img
+ {
+ margin-left: auto;
+ margin-right: auto;
+ display: block;
+ padding: 5px;
+ } 
+ 
+ .img_right
+ {
+ margin-top: -18px;
+ margin-right: 10px;
+ float:right;
+ width: 115px;
+ height: 178px;
+ display: block;
+ padding: 3px;
+ border: 1px #878787 outset;
+ box-shadow: 2px 4px 6px 0px rgba(50, 50, 50, 0.5);
+ } 
+ 
+
+
+.projects {
+width: auto;
+    float: left;
+	position: relative;
+	background-color: white;
+   
+}
+
+.projects img {
+    display: block;
+}
+
+.projects .cornerLink {
+    opacity: 0;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    padding: 2px 0px;
+    color: #ffffff;
+    background: #000000;
+    text-decoration: none;
+    text-align: center;
+    -webkit-transition: opacity 500ms;
+    -moz-transition: opacity 500ms;
+    -o-transition: opacity 500ms;
+    transition: opacity 500ms;
+
+}
+
+.link {
+margin-left: auto;
+margin-right: auto;
+text-align: center;
+}
+
+
+.projects:hover .cornerLink {
+    opacity: 0.8;
+}
+
+h1{
+	font-weight: bold;
+	font-size: 23px;
+	margin-bottom: 20px;
+}
+
+h2{
+	color: #4d9221;
+	font-weight: bold;
+	font-size: 16px;
+	margin-bottom: 10px;
+	margin-top: 5px;	
+}
+
+h3{
+	font-family: Calibri, Courier;
+	font-size: 14px;
+	margin-bottom: 7px;	
+	margin-top: 0px;
+	color: #4d9221;
+}
+
+h3 .itemlink{
+	font-family: Calibri, Courier;
+	font-size: 14px;
+	margin-bottom: 7px;	
+	margin-top: 0px;
+
+}
+
+ul{
+	list-style-type:disc;
+	font-size: 14px;
+	margin-top: 0px;
+	margin-bottom: 0px;	
+}
+
+p {
+	font-size: 14px;
+	margin-top: 0px;
+	margin-bottom: 0px;	
+}
+
+.footer {
+	font-size: 11px;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	text-align: left;
+}
+
+
+
