@@ -1,0 +1,18 @@
+{
+"type": "FeatureCollection",
+                                                                                
+"features": [
+{ "type": "Feature", "id": 0, "properties": { "Id": 0, "title":"B&aumlckerei & Konditorei Bierbaum, <br>01257 Dresden, <br>Sosaer Stra&szlige 7" }, "geometry": { "type": "Point", "coordinates": [ 13.82499, 50.998977 ] } }
+,
+{ "type": "Feature", "id": 1, "properties": { "Id": 0, "title":"Keller- & Gartenwirtschaft <br>&quot;13 Pfaffen&quot;, <br>01257 Dresden, <br>Pfaffendorfer Stra&szlige 13" }, "geometry": { "type": "Point", "coordinates": [ 13.824335, 50.998881 ] } }
+,
+{ "type": "Feature", "id": 2, "properties": { "Id": 0, "title":"Griechisches Restaurant <br>&quot;Poseidon II&quot;, <br>01257 Dresden, <br>Niedersedlitzer Stra&szlige 65" }, "geometry": { "type": "Point", "coordinates": [ 13.810351, 51.00482 ] } }
+,
+{ "type": "Feature", "id": 3, "properties": { "Id": 0, "title":"Gastst&aumltte &quot;Stadt Dresden&quot;, <br>01257 Dresden, <br>Stra&szlige des 17.Juni 24" }, "geometry": { "type": "Point", "coordinates": [ 13.825118, 51.003671 ] } }
+,
+{ "type": "Feature", "id": 4, "properties": { "Id": 0, "title":"Asia Gourmet Restaurant <br>&quot;Pavillon&quot;, <br>01257 Dresden, <br>Stra&szlige des 17.Juni 12" }, "geometry": { "type": "Point", "coordinates": [ 13.821281, 51.005948 ] } }
+
+
+
+]
+}
