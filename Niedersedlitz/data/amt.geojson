@@ -1,0 +1,17 @@
+{
+"type": "FeatureCollection",
+                                                                                
+"features": [
+{ "type": "Feature", "id": 0, "properties": { "Id": 0, "title":"Freiwillige Feuerwehr Dresden - Niedersedlitz, <br>01257 Dresden, <br>Dorfstraße 7-9" }, "geometry": { "type": "Point", "coordinates": [ 13.820352, 50.997806 ] } }
+,
+{ "type": "Feature", "id": 1, "properties": { "Id": 0, "title":"Ev.-Luth. Kirchgemeinde Dresden-Leuben<br>Gemeindezentrum Niedersedlitz, <br>01257 Dresden, <br>Pfarrer-Schneider-Straße 7" }, "geometry": { "type": "Point", "coordinates": [ 13.82208, 50.998783 ] } }
+,
+{ "type": "Feature", "id": 2, "properties": { "Id": 0, "title":"Apostolische Gemeinde Dresden, <br>01257 Dresden, <br>Bismarckstraße 30" }, "geometry": { "type": "Point", "coordinates": [ 13.823817, 51.001748 ] } }
+,
+{ "type": "Feature", "id": 3, "properties": { "Id": 0, "title":"Ev.-Freikirchliche Gemeinde Dresden Süd-Ost, <br>01257 Dresden, <br>Straße des 17.Juni 25" }, "geometry": { "type": "Point", "coordinates": [ 13.826272, 51.002478 ] } }
+
+
+
+
+]
+}
