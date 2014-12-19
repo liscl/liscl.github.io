@@ -1,0 +1,21 @@
+{
+"type": "FeatureCollection",
+                                                                                
+"features": [
+{ "type": "Feature", "id": 0, "properties": { "Id": 0, "title":"B&aumlckerei & Konditorei Bierbaum, <br>0125 Dresden, <br>Sosaer Stra&szlige 7" }, "geometry": { "type": "Point", "coordinates": [ 13.82499, 50.998977 ] } }
+,
+{ "type": "Feature", "id": 1, "properties": { "Id": 0, "title":"Ferienwohnung Haus Luna, <br>01259 Dresden, <br>An der Post 22" }, "geometry": { "type": "Point", "coordinates": [ 13.824937, 51.000242 ] } }
+,
+{ "type": "Feature", "id": 2, "properties": { "Id": 0, "title":"Ferienwohnung Rosarot, <br>01257 Dresden, <br>Buchsbaumstra&szlige 8" }, "geometry": { "type": "Point", "coordinates": [ 13.808459, 51.001134 ] } }
+,
+{ "type": "Feature", "id": 3, "properties": { "Id": 0, "title":"Ferienwohnung Dahlmann, <br>01257 Dresden, <br>Bismarckstra&szlige 18" }, "geometry": { "type": "Point", "coordinates": [ 13.826136, 51.000369 ] } }
+,
+{ "type": "Feature", "id": 4, "properties": { "Id": 0, "title":"Ferienbungalow Deile, <br>01257 Dresden, <br>Reisstra&szlige 62" }, "geometry": { "type": "Point", "coordinates": [ 13.819492, 51.001678 ] } }
+,
+{ "type": "Feature", "id": 5, "properties": { "Id": 0, "title":"G&aumlstezimmer Oelmann, <br>01257 Dresden, <br>Niedersedlitzer Stra&szlige 59" }, "geometry": { "type": "Point", "coordinates": [ 13.809118, 51.005564 ] } }
+,
+{ "type": "Feature", "id": 6, "properties": { "Id": 0, "title":"Zimmervermietung Genne, <br>01257 Dresden, <br>Bahnhofstra&szlige 11" }, "geometry": { "type": "Point", "coordinates": [ 13.825465, 50.998194 ] } }
+
+
+]
+}
