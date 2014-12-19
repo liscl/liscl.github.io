@@ -1,0 +1,12 @@
+{
+"type": "FeatureCollection",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:EPSG::37001" } },
+                                                                                
+"features": [
+{ "type": "Feature", "properties": { "osm_id": 4246863, "lastchange": "2013-02-03T18:42:47Z", "code": 6101, "fclass": "rail", "layer": null, "bridge": "F", "tunnel": "F" }, "geometry": { "type": "LineString", "coordinates": [ [ 13.8214623, 51.0037261 ], [ 13.81834, 51.0056457 ], [ 13.8125986, 51.0091122 ], [ 13.8116946, 51.0096574 ], [ 13.8107772, 51.0102112 ], [ 13.808753, 51.0114262 ] ] } },
+{ "type": "Feature", "properties": { "osm_id": 4246864, "lastchange": "2011-11-01T09:16:46Z", "code": 6101, "fclass": "rail", "layer": null, "bridge": "F", "tunnel": "F" }, "geometry": { "type": "LineString", "coordinates": [ [ 13.8287717, 50.9993014 ], [ 13.827321, 51.0001977 ], [ 13.8220462, 51.0033781 ] ] } },
+{ "type": "Feature", "properties": { "osm_id": 4246865, "lastchange": "2011-11-01T09:00:13Z", "code": 6101, "fclass": "rail", "layer": 1, "bridge": "T", "tunnel": "F" }, "geometry": { "type": "LineString", "coordinates": [ [ 13.8297796, 50.9986955 ], [ 13.8287717, 50.9993014 ] ] } },
+{ "type": "Feature", "properties": { "osm_id": 4246866, "lastchange": "2011-11-01T09:21:09Z", "code": 6101, "fclass": "rail", "layer": null, "bridge": "F", "tunnel": "F" }, "geometry": { "type": "LineString", "coordinates": [ [ 13.8381614, 50.993642 ], [ 13.8297796, 50.9986955 ] ] } },
+{ "type": "Feature", "properties": { "osm_id": 10713819, "lastchange": "2011-11-01T08:55:26Z", "code": 6101, "fclass": "rail", "layer": 1, "bridge": "T", "tunnel": "F" }, "geometry": { "type": "LineString", "coordinates": [ [ 13.8220462, 51.0033781 ], [ 13.8214623, 51.0037261 ] ] } }
+]
+}
