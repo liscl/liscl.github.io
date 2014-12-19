@@ -1,0 +1,15 @@
+{
+"type": "FeatureCollection",
+                                                                                
+"features": [
+{ "type": "Feature", "id": 0, "properties": { "Id": 0, "title":"Netto Marken-Discount,<br>01257 Dresden,<br>Straße des 17. Juni 12" }, "geometry": { "type": "Point", "coordinates": [ 13.821332, 51.006275 ] } }
+,
+{ "type": "Feature", "id": 1, "properties": { "Id": 0, "title":"Penny,<br>01257 Dresden,<br>Straße des 17. Juni 13"  }, "geometry": { "type": "Point", "coordinates": [ 13.819921, 51.005489 ] } }
+,
+{ "type": "Feature", "id": 2, "properties": { "Id": 0, "title":"Rewe,<br>01257 Dresden,<br>Straße des 17. Juni 32"  }, "geometry": { "type": "Point", "coordinates": [ 13.830403, 51.000672 ] } }
+,
+{ "type": "Feature", "id": 3, "properties": { "Id": 0, "title":"nah & frisch,<br>01259 Dresden,<br>Niedersedlitzer Platz 6"  }, "geometry": { "type": "Point", "coordinates": [ 13.825205, 50.995766 ] } }
+
+
+]
+}
