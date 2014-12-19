@@ -1,0 +1,11 @@
+{
+"type": "FeatureCollection",
+                                                                                
+"features": [
+{ "type": "Feature", "id": 0, "properties": { "Id": 0, "name": "A", "title":"The massive RINGSTRASSE in front of you is built on the former city ramparts and fortifies the first district - back then with stones, now with cars. By the way, despite the very diverse architecture, all the monumental buildings around the Ring are from the same period end of 19th century.To your left you’ll see the two biggest museums of Vienna. The MUSEUM OF ART HISTORY hosts one of the biggest art collections in the world. If you are into big fossil spiders, 2m long tapeworms that once lived in humans or the biggest collection of meteoroids., then the MUSEUM OF NATURAL HISTORY is for you. In any case you should bring enough time to loose yourself. Across the street lies the impressive HELDENPLATZ (Heroe’s square). If you are too lazy to walk, just gaze at all monuments around Ringstrasse from here." }, "geometry": { "type": "Point", "coordinates": [ 13.8154816, 51.0046624 ] } }
+,
+{ "type": "Feature", "id": 1, "properties": { "Id": 0, "name": "B", "title":"The massive RINGSTRASSE in front of you is built on the former city ramparts and fortifies the first district - back then with stones, now with cars. By the way, despite the very diverse architecture, all the monumental buildings around the Ring are from the same period end of 19th century.To your left you’ll see the two biggest museums of Vienna. The MUSEUM OF ART HISTORY hosts one of the biggest art collections in the world. If you are into big fossil spiders, 2m long tapeworms that once lived in humans or the biggest collection of meteoroids., then the MUSEUM OF NATURAL HISTORY is for you. In any case you should bring enough time to loose yourself. Across the street lies the impressive HELDENPLATZ (Heroe’s square). If you are too lazy to walk, just gaze at all monuments around Ringstrasse from here." }, "geometry": { "type": "Point", "coordinates": [ 13.817971123456789, 50.998518123456789 ] } }
+
+
+]
+}
