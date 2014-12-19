@@ -1,0 +1,34 @@
+{
+"type": "FeatureCollection",
+                                                                                
+"features": [
+{ "type": "Feature", "id": 0, "properties": { "Id": 0, "title":"89. Grundschule, <br>01257 Dresden, <br>Sosaer Stra&szlige 10" }, "geometry": { "type": "Point", "coordinates": [ 13.824459, 50.999745 ] } }
+,
+{ "type": "Feature", "id": 1, "properties": { "Id": 0, "title":"Schulhort, <br>01257 Dresden, <br>Sosaer Stra&szlige 10" }, "geometry": { "type": "Point", "coordinates": [ 13.824706, 50.999637 ] } }
+,
+{ "type": "Feature", "id": 2, "properties": { "Id": 0, "title":"Kindertagesstätte Villa Naseweis, <br>01257 Dresden, <br>Sosaer Stra&szlige 6" }, "geometry": { "type": "Point", "coordinates": [ 13.825668, 50.999093 ] } }
+,
+{ "type": "Feature", "id": 3, "properties": { "Id": 0, "title":"Integrations-Kindertagesstätte Sonnenschein, <br>01259 Dresden, <br>Heidenauer Straße 4" }, "geometry": { "type": "Point", "coordinates": [ 13.827225, 50.997507 ] } }
+,
+{ "type": "Feature", "id": 4, "properties": { "Id": 0, "title":"Integrativer Waldorfkindergarten Raffaelkindergarten, <br>01259 Dresden, <br>Bahnhofstraße 19" }, "geometry": { "type": "Point", "coordinates": [ 13.82742, 50.998841 ] } }
+,
+{ "type": "Feature", "id": 5, "properties": { "Id": 0, "title":"Kindertagesstätte mit heilpädagogischen Gruppen, <br>01257 Dresden, <br>Heinrich-Mann-Straße 26" }, "geometry": { "type": "Point", "coordinates": [ 13.80301, 50.998059 ] } }
+,
+{ "type": "Feature", "id": 6, "properties": { "Id": 0, "title":"Kindertagesstätte Heinrich-Mann-Straße 32, <br>01257 Dresden, <br>Heinrich-Mann-Straße 32" }, "geometry": { "type": "Point", "coordinates": [ 13.804882, 50.996703 ] } }
+,
+{ "type": "Feature", "id": 7, "properties": { "Id": 0, "title":"Integrations-Kindertagesstätte Kinderhaus Hand in Hand, <br>01257 Dresden, <br>Heinrich-Mann-Straße 34" }, "geometry": { "type": "Point", "coordinates": [ 13.80545, 50.996506 ] } }
+,
+{ "type": "Feature", "id": 8, "properties": { "Id": 0, "title":"Spielplatz Curt-Guratzsch-Straße, <br>01257 Dresden, <br>Curt-Guratzsch-Straße 12" }, "geometry": { "type": "Point", "coordinates": [ 13.822874, 50.999895 ] } }
+,
+{ "type": "Feature", "id": 9, "properties": { "Id": 0, "title":"Spielplatz Lungkwitzer Straße, <br>01259 Dresden, <br>Lungkwitzer Straße 2" }, "geometry": { "type": "Point", "coordinates": [ 13.824957, 50.997662 ] } }
+,
+{ "type": "Feature", "id": 10, "properties": { "Id": 0, "title":"Spielplatz Mühlenstraße, <br>01257 Dresden, <br>Mühlenstraße 21" }, "geometry": { "type": "Point", "coordinates": [ 13.819779, 50.996872 ] } }
+,
+{ "type": "Feature", "id": 11, "properties": { "Id": 0, "title":"Spielplatz Erich-Kästner-Straße, <br>01257 Dresden, <br>Erich-Kästner-Straße" }, "geometry": { "type": "Point", "coordinates": [ 13.804058, 50.995867 ] } }
+,
+{ "type": "Feature", "id": 12, "properties": { "Id": 0, "title":"Spielplatz Sachsenwerkstraße, <br>01257 Dresden, <br>Sachsenwerkstraße 71" }, "geometry": { "type": "Point", "coordinates": [ 13.828515, 51.003487 ] } }
+
+
+
+]
+}
