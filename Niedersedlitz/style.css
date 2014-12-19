@@ -1,0 +1,297 @@
+
+
+#borderPath {
+    stroke: black;
+    stroke-width: 3;
+    fill: none;
+}
+
+/* basemap style */
+
+.buildings {
+   fill: #fcbba1;
+}
+
+.water{
+	stroke: #7bccc4;
+    stroke-width: 2;
+	fill: none;
+
+  }
+
+.road{
+	stroke: #969696;
+    stroke-width: 1;
+	fill: none;
+
+  }
+
+.railway{
+	stroke: #000000;
+    stroke-width: 1;
+	fill: none;
+}
+
+.green {
+    fill: #d9f0a3;
+}
+
+.uebernachtung {                         
+    fill: #0570b0;
+    stroke: #0570b0;
+    stroke-width: 0.5;
+}
+
+.essen {                          
+    fill: #238443;
+    stroke: #238443;
+    stroke-width: 0.5;
+}
+
+.einzelhandel {                          
+    fill: #810f7c;
+    stroke: #810f7c;
+    stroke-width: 0.5;
+}
+
+
+
+/* poiuebernachtung style */
+.poi {
+  fill: #0570b0;
+    stroke: #0570b0;
+    stroke-width: 0.5;
+}
+
+.poi:hover {
+    stroke-width: 2;
+    fill: orange;
+    stroke: orange;
+}
+
+
+/* poiamt style */
+.poiamt {
+  fill: black;
+    stroke: black;
+    stroke-width: 0.5;
+}
+
+.poiamt:hover {
+    stroke-width: 2;
+    fill: orange;
+    stroke: orange;
+}
+
+
+/* poiessen style */
+.poiessen {
+    fill: #238443;
+    stroke: #238443;
+    stroke-width: 0.5;
+}
+
+.poiessen:hover {
+    stroke-width: 2;
+    fill: orange;
+    stroke: orange;
+}
+
+/* poikinder style */
+.poikinder {
+    fill: #dd1c77;
+    stroke: #dd1c77;
+    stroke-width: 0.5;
+}
+
+.poikinder:hover {
+    stroke-width: 2;
+    fill: orange;
+    stroke: orange;
+}
+
+
+/* poidienstleistung style */
+.poidienst {
+   fill: #ff7f00;
+   stokes: #ff7f00;
+    stroke-width: 0.5;
+}
+
+.poidienst:hover {
+    stroke-width: 2;
+    fill: orange;
+    stroke: orange;
+}
+
+
+/* poieinzelhandel style */
+.poieinzelhandel {
+    fill: #810f7c;
+    stroke: #810f7c;
+    stroke-width: 0.5;
+}
+
+.poieinzelhandel:hover {
+    stroke-width: 2;
+    fill: orange;
+    stroke: orange;
+}
+
+/* poisupermarkt style */
+.poisupermarkt {
+   fill: limegreen;
+   stokes: limegreen;
+    stroke-width: 0.5;
+}
+
+.poisupermarkt:hover {
+    stroke-width: 2;
+    fill: orange;
+    stroke: orange;
+}
+
+
+.label.active {
+    fill:white;
+}
+
+.label {
+    fill:white;
+    font-size: 8px;
+    font-family: Trebuchet MS;
+    text-align: left;
+    text-anchor: middle;
+}
+
+.label:hover {
+    font-size: 12px;                
+}
+
+div.tooltip {
+    position: absolute;
+    text-align: left;
+    width: auto;
+    min-height: 20px;
+    padding: 4px;
+    font: 15px sans-serif;
+    background: aliceblue;   //farbe infofenster 
+    border: 0px;
+    border-radius: 8px;
+    pointer-events: none;
+}
+
+
+
+
+/* page style */
+
+body {
+    position:relative;
+    background-size: 100% auto;
+}
+
+@font-face{
+    font-family: Arial;
+}
+
+h1.dropdownh1 {
+    font-family: Arial;
+    font-size: 24px;
+    color: #5E401C;
+    text-align: left;
+    margin-bottom: 10px;
+    margin-left: 40px;
+    margin-top: 10px;
+ 
+   }
+
+
+h2.dropdownh2 {
+    font-family: Arial;
+    font-size: 16px;
+    font-weight: lighter;
+    color: #5E401C;
+    text-align: left;
+    margin-top: 0;
+    margin-left: 43px;
+    margin-bottom: 10px;
+
+}
+
+
+
+.canvas {
+    position: relative;
+    margin-left: 40px;
+    top: -50px;
+    float: left;
+    background-color: white;
+    visibility: visible;
+}
+
+
+
+.map {
+    position: relative;
+    left: 270px;
+    top: -20px;
+    color: white;
+    text-align: center;
+    font-family: Trebuchet MS;
+    text-shadow: 0 1px 0 rgba(0,0,0,.5);
+    font-size: 15px;
+    cursor: pointer;
+}
+
+#dropdown {
+	position: relative;
+	left:850px;
+	top: 15px;
+	width: 300px;
+height: auto;
+}
+
+#menue {
+
+position: relative;
+width: 300px;
+height: auto;
+left: 900px;
+top:0px;
+}
+
+
+
+#description {
+    min-height: 100px;
+}
+
+#about {
+    height: 100px;
+}
+
+.text{
+    width: 300px;
+    float: left;
+}
+
+.cover {
+    margin-right: 20px;
+    margin-top: 10px;
+    margin-left: 50px;
+    float: right;
+}
+
+#footer {
+    position: absolute;
+    font-family: Trebuchet MS;
+    font-size: 14px;
+    font-weight: bold;
+    top: 685px;
+    left: 50px;
+    text-align: left;
+}
+
+
+
