@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+	<title>Was - Wer - Wo - Dresden-Niedersedlitz</title>
+
+	<script src="http://d3js.org/d3.v3.min.js"></script>	
+	<script src="http://d3js.org/topojson.v0.min.js"></script>
+	
+	
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <!-- include all external script files -->
+    <script type="text/javascript" src="script.js"></script>
+
+
+
+</head>
+
+<body>
+    <div id="dropdown"><h1 class="dropdownh1">Was - Wer - Wo</h1>
+    <h2 class="dropdownh2">Adressen in Niedersedlitz</h2></div>
+	 
+  
+
+ 
+
+	<!-- set up the main map container (parameters) and call the external functions -->
+	<script>
+    "use strict";
+
+    // define variables
+	var margin = {top: 0, right: 0, bottom: 0, left: 0}, 
+        width = 800,
+        height = 600;
+
+    var centered;
+
+    // define projection parameters
+	var projection = d3.geo.mercator()
+			.center([13.822238, 51.001765])
+    		.scale(1400000)
+    		.rotate([0,0]);
+
+    // create svg canvas to draw map on
+    var svg = d3.select("body").append("svg")
+		.attr("width", width)
+		.attr("height", height)
+        .attr("border", 3)
+        .attr("class", "canvas");
+
+    // create path object 
+    var path = d3.geo.path().projection(projection);
+
+    // create group object g
+	var g = svg.append("g");
+
+
+
+    // create div object to use for dynamic tooltip
+    var div = d3.select("body")
+        .append("div")
+        .attr("class", "tooltip")
+        .style("opacity", 0);
+
+    // call map function
+    
+
+	
+	drawmap();
+	
+    
+    // zoom functionality parameters
+    var zoom = d3.behavior.zoom()
+        .translate([0, 0])
+        .scale(1)
+        .scaleExtent([1, 8])
+        .on("zoom", zoomed); // the function zoomed is defined in script.js
+
+    svg.call(zoom);
+
+function checkUebernachtung(){
+    d3.selectAll(".poi").attr("visibility", "visible")
+	d3.selectAll(".poiamt").attr("visibility", "hidden")
+	d3.selectAll(".poidienst").attr("visibility", "hidden")
+	d3.selectAll(".poieinzelhandel").attr("visibility", "hidden")
+	d3.selectAll(".poiessen").attr("visibility", "hidden")
+	d3.selectAll(".poikinder").attr("visibility", "hidden")
+	d3.selectAll(".poisupermarkt").attr("visibility", "hidden");
+}
+
+function checkKinder(){
+    d3.selectAll(".poikinder").attr("visibility", "visible")
+	d3.selectAll(".poi").attr("visibility", "hidden")
+	d3.selectAll(".poiamt").attr("visibility", "hidden")
+	d3.selectAll(".poidienst").attr("visibility", "hidden")
+	d3.selectAll(".poiessen").attr("visibility", "hidden")
+	d3.selectAll(".poieinzelhandel").attr("visibility", "hidden")
+	d3.selectAll(".poisupermarkt").attr("visibility", "hidden");
+}
+
+function checkEssen(){
+    d3.selectAll(".poiessen").attr("visibility", "visible")
+	d3.selectAll(".poi").attr("visibility", "hidden")
+	d3.selectAll(".poiamt").attr("visibility", "hidden")
+	d3.selectAll(".poidienst").attr("visibility", "hidden")
+	d3.selectAll(".poieinzelhandel").attr("visibility", "hidden")
+	d3.selectAll(".poikinder").attr("visibility", "hidden")
+	d3.selectAll(".poisupermarkt").attr("visibility", "hidden");
+}
+
+function checkAmt(){
+    d3.selectAll(".poiamt").attr("visibility", "visible")
+	d3.selectAll(".poi").attr("visibility", "hidden")
+	d3.selectAll(".poidienst").attr("visibility", "hidden")
+	d3.selectAll(".poieinzelhandel").attr("visibility", "hidden")
+	d3.selectAll(".poiessen").attr("visibility", "hidden")
+	d3.selectAll(".poikinder").attr("visibility", "hidden")
+	d3.selectAll(".poisupermarkt").attr("visibility", "hidden");
+}
+
+function checkDienst(){
+    d3.selectAll(".poidienst").attr("visibility", "visible")
+	d3.selectAll(".poi").attr("visibility", "hidden")
+	d3.selectAll(".poiamt").attr("visibility", "hidden")
+	d3.selectAll(".poieinzelhandel").attr("visibility", "hidden")
+	d3.selectAll(".poiessen").attr("visibility", "hidden")
+	d3.selectAll(".poikinder").attr("visibility", "hidden")
+	d3.selectAll(".poisupermarkt").attr("visibility", "hidden");
+}
+
+function checkEinzelhandel(){
+    d3.selectAll(".poieinzelhandel").attr("visibility", "visible")
+	d3.selectAll(".poi").attr("visibility", "hidden")
+	d3.selectAll(".poiamt").attr("visibility", "hidden")
+	d3.selectAll(".poidienst").attr("visibility", "hidden")
+	d3.selectAll(".poiessen").attr("visibility", "hidden")
+	d3.selectAll(".poikinder").attr("visibility", "hidden")
+	d3.selectAll(".poisupermarkt").attr("visibility", "hidden");
+}
+
+function checkSupermarkt(){
+    d3.selectAll(".poisupermarkt").attr("visibility", "visible")
+	d3.selectAll(".poi").attr("visibility", "hidden")
+	d3.selectAll(".poiamt").attr("visibility", "hidden")
+	d3.selectAll(".poidienst").attr("visibility", "hidden")
+	d3.selectAll(".poieinzelhandel").attr("visibility", "hidden")
+	d3.selectAll(".poiessen").attr("visibility", "hidden")
+	d3.selectAll(".poikinder").attr("visibility", "hidden");
+}
+
+function checkAll(){
+	d3.selectAll(".poi").attr("visibility", "visible")
+	d3.selectAll(".poiamt").attr("visibility", "visible")
+	d3.selectAll(".poidienst").attr("visibility", "visible")
+	d3.selectAll(".poieinzelhandel").attr("visibility", "visible")
+	d3.selectAll(".poiessen").attr("visibility", "visible")
+	d3.selectAll(".poikinder").attr("visibility", "visible")
+	d3.selectAll(".poisupermarkt").attr("visibility", "visible");
+}
+
+function checkNothing(){
+	d3.selectAll(".poi").attr("visibility", "hidden")
+	d3.selectAll(".poiamt").attr("visibility", "hidden")
+	d3.selectAll(".poidienst").attr("visibility", "hidden")
+	d3.selectAll(".poieinzelhandel").attr("visibility", "hidden")
+	d3.selectAll(".poiessen").attr("visibility", "hidden")
+	d3.selectAll(".poikinder").attr("visibility", "hidden")
+	d3.selectAll(".poisupermarkt").attr("visibility", "hidden");
+}
+	</script> 
+<br>
+<div class="buttons">
+<input type="radio" name="test" onclick='checkAll()'> Alles<br>
+<input type="radio" name="test" onclick='checkNothing()'> Nichts<br>
+<input type="radio" name="test" onclick='checkUebernachtung()'> Übernachtung<br>
+<input type="radio" name="test" onclick='checkKinder()'> Kinderbetreung<br>
+<input type="radio" name="test" onclick='checkEssen()'> Essen & Trinken<br>
+<input type="radio" name="test" onclick='checkSupermarkt()'> Supermarkt<br>
+<input type="radio" name="test" onclick='checkAmt()'> Behörden, Kirche<br>
+<input type="radio" name="test" onclick='checkEinzelhandel()'> Einzelhandel<br>
+<input type="radio" name="test" onclick='checkDienst()'> Dienstleistung<br>   
+</div>
+
+
+
+
+    <div id="footer">&#169; Lisa Clemens, Februar 2014</div>
+</body>
+
+</html>
