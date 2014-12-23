@@ -1,0 +1,11 @@
+{
+"type": "FeatureCollection",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:EPSG::37001" } },
+                                                                                
+"features": [
+
+
+{ "type": "Feature", "properties": { "id": 1, "name": "Corps II <br>before crossing the bridge", "size": "16.226" }, "geometry": { "type": "Point", "coordinates": [ 28.3, 54.182 ] } }
+
+]
+}
