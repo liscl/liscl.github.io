@@ -1,0 +1,788 @@
+
+
+#borderPath {
+    stroke: black;
+    stroke-width: 3;
+    fill: none;
+}
+
+/* basemap style */
+
+.berezina {
+   stroke: blue;
+   stroke-width: 1;
+   fill: none;
+}
+
+.places{
+
+	fill: black;
+
+  }
+
+.bridge{
+
+	stroke: none;
+   stroke-width: 0.7;
+   fill: white;
+   
+  }
+  
+  .bridge2{
+
+	stroke: black;
+   stroke-width: 2;
+   fill: none;
+   
+  }
+  
+
+ /* corps_before_relative style*/
+  
+.corps1_4_before_relative_max{
+
+	stroke-width: 4.65;
+	stroke: #fccde5;
+    fill: #fccde5;
+   
+   
+  }
+  
+  
+.corps1_4_before_relative_ave{
+
+	stroke-width: 3.7125;
+	stroke: #fccde5;
+    fill: #fccde5;
+   
+   
+  }
+  
+
+.corps1_4_before_relative{
+
+	
+	stroke-width: 3.3;
+	stroke: #fccde5;
+    fill: #fccde5;
+  
+  }  
+
+  
+.corps2_before_relative_max{
+
+	stroke-width: 13.95;
+	stroke: #bebada;
+    fill: #bebada;
+   
+  }
+  
+  
+.corps2_before_relative_ave{
+
+	stroke-width: 12.1695;
+	stroke: #bebada;
+    fill: #bebada;
+   
+   
+  }
+  
+  
+
+.corps2_before_relative{
+
+	
+	stroke-width: 10.5;
+	stroke: #bebada;
+    fill: #bebada;
+   
+  }  
+  
+   
+
+  
+.corps3_5_before_relative_max{
+
+	stroke-width: 8.1;
+	stroke: #fb8072;
+    fill: #fb8072;
+   
+  }
+  
+  
+  
+.corps3_5_before_relative_ave{
+
+	stroke-width: 6.45;
+	stroke: #fb8072;
+    fill: #fb8072;
+   
+   
+  }
+  
+ 
+.corps3_5_before_relative{
+
+	
+	stroke-width: 4.5;
+	stroke: #fb8072;
+    fill: #fb8072;
+  
+  } 
+  
+  
+  
+.corps9_before_relative_max{
+
+	stroke-width: 28.2;
+	stroke:#80b1d3;
+    fill: #80b1d3;
+ 
+  }
+  
+  
+.corps9_before_relative_ave{
+
+	stroke-width: 19.875;
+	stroke: #80b1d3;
+    fill: #80b1d3;
+   
+   
+  }
+  
+  
+
+.corps9_before_relative{
+
+	
+	stroke-width: 15;
+	stroke: #80b1d3;
+    fill: #80b1d3;
+  
+  }  
+  
+  
+  
+ .imperial_guard_old_before_relative_max{
+	stroke-width: 8.9175;
+	stroke: #b3de69;
+    fill: #b3de69;
+  
+  }
+  
+  
+  
+   .imperial_guard_old_before_relative_ave{
+	stroke-width: 7.959;
+	stroke: #b3de69;
+    fill: #b3de69;
+   
+   
+  }
+  
+  
+   .imperial_guard_old_before_relative{
+	stroke-width: 7.32;
+	stroke: #b3de69;
+    fill: #b3de69;
+   
+  }
+  
+  
+  
+.imperial_guard_young_before_relative_max{
+	   stroke-width: 4.5;
+	   stroke: #8dd3c7;
+	   fill: #8dd3c7;
+	   
+  }
+  
+  
+  .imperial_guard_young_before_relative_ave{
+	   stroke-width: 3.3375;
+	   stroke: #8dd3c7;
+	   fill: #8dd3c7;
+	    
+   
+  }
+  
+  
+  
+  .imperial_guard_young_before_relative{
+	   stroke-width: 2.25;
+	   stroke: #8dd3c7;
+	   fill: #8dd3c7;
+	  
+	    
+     }
+	 
+ 
+/* corps_crossing style*/
+  
+.corps1_4_crossing{
+
+   fill: #737373;
+   
+  }
+  
+ .corps2_crossing{
+
+   fill: #737373;
+   
+  }
+  
+ .corps3_5_crossing{
+
+   fill: #737373;
+   
+  }
+  
+  .corps9_crossing{
+
+   fill: #737373;
+   
+  }
+  
+ .imperial_guard_old_crossing{
+
+   fill: #737373;
+   
+  }
+  
+.imperial_guard_young_crossing{
+	
+   fill: #737373;
+   
+  }
+ 
+/* corps_after style*/
+  
+
+   /* corps_after_relative style*/
+  
+.corps1_4_after_relative_max{
+
+	stroke-width: 2.325;
+	stroke: #fccde5;
+    fill: #fccde5;
+   
+   
+  }
+  
+  
+.corps1_4_after_relative_ave{
+
+	stroke-width: 1.85625;
+	stroke: #fccde5;
+    fill: #fccde5;
+   
+   
+  }
+  
+
+.corps1_4_after_relative{
+
+	
+	stroke-width: 1.65;
+	stroke: #fccde5;
+    fill: #fccde5;
+
+  }  
+
+  
+.corps2_after_relative_max{
+
+	stroke-width: 6.975;
+	stroke: #bebada;
+    fill: #bebada;
+  
+  }
+  
+  
+.corps2_after_relative_ave{
+
+	stroke-width: 6.08475;
+	stroke: #bebada;
+    fill: #bebada;
+   
+   
+  }
+  
+  
+
+.corps2_after_relative{
+
+	
+	stroke-width: 5.25;
+	stroke: #bebada;
+    fill: #bebada;
+  
+  }  
+  
+   
+
+  
+.corps3_5_after_relative_max{
+
+	stroke-width: 4.05;
+	stroke: #fb8072;
+    fill: #fb8072;
+  
+  }
+  
+  
+  
+.corps3_5_after_relative_ave{
+
+	stroke-width: 3.225;
+	stroke: #fb8072;
+    fill: #fb8072;
+   
+   
+  }
+  
+ 
+.corps3_5_after_relative{
+
+	
+	stroke-width: 2.25;
+	stroke: #fb8072;
+    fill: #fb8072;
+   
+  } 
+  
+  
+  
+.corps9_after_relative_max{
+
+	stroke-width: 14.1;
+	stroke:#80b1d3;
+    fill: #80b1d3;
+   
+  }
+  
+  
+.corps9_after_relative_ave{
+
+	stroke-width: 9.9375;
+	stroke: #80b1d3;
+    fill: #80b1d3;
+   
+   
+  }
+  
+  
+
+.corps9_after_relative{
+
+	
+	stroke-width: 7.5;
+	stroke: #80b1d3;
+    fill: #80b1d3;
+   
+  }  
+  
+  
+  
+ .imperial_guard_old_after_relative_max{
+	stroke-width: 4.45875;
+	stroke: #b3de69;
+    fill: #b3de69;
+  
+  }
+  
+  
+  
+   .imperial_guard_old_after_relative_ave{
+	stroke-width: 3.9795;
+	stroke: #b3de69;
+    fill: #b3de69;
+   
+   
+  }
+  
+  
+   .imperial_guard_old_after_relative{
+	stroke-width: 3.66;
+	stroke: #b3de69;
+    fill: #b3de69;
+  
+  }
+  
+  
+  
+.imperial_guard_young_after_relative_max{
+	   stroke-width: 2.25;
+	   stroke: #8dd3c7;
+	   fill: #8dd3c7;
+	  
+  }
+  
+  
+  .imperial_guard_young_after_relative_ave{
+	   stroke-width: 1.66875;
+	   stroke: #8dd3c7;
+	   fill: #8dd3c7;
+	    
+   
+  }
+  
+  
+  
+  .imperial_guard_young_after_relative{
+	   stroke-width: 1.25;
+	   stroke: #8dd3c7;
+	   fill: #8dd3c7;
+	  
+	    
+     }
+  
+/* corps_path style */
+.corps_path{
+	stroke: grey;
+   stroke-width: 1;
+   fill: none;
+   
+  }
+  
+  .arrows{
+	
+   fill: grey;
+   
+  }
+  
+ /* poiplaces style */
+.poiplaces {
+      stroke-width: 4;
+	  stroke: black;
+    fill: black;
+	
+}
+
+.poiplaces:hover {
+    stroke-width: 5;
+        stroke: orange;
+		fill: orange;
+}
+
+
+
+.label.active {
+    fill:white;
+}
+
+.label {
+    fill:white;
+    font-size: 8px;
+    font-family: Trebuchet MS;
+    text-align: left;
+    text-anchor: middle;
+}
+
+.label:hover {
+    font-size: 12px;                
+}
+
+div.tooltip {
+    position: absolute;
+    text-align: left;
+    width: auto;
+    min-height: 20px;
+    padding: 4px;
+    font: 12px sans-serif;
+    background: aliceblue;   
+    border: 0px;
+    border-radius: 8px;
+    pointer-events: none;
+}
+
+
+
+.y.axisLeft text {
+    fill: black;
+}
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #d9d9d9;
+  shape-rendering: crispEdges;
+}
+
+.bar1 {
+  fill: #377eb8;
+}
+
+.bar2 {
+  fill: #e41a1c;
+}
+
+.barC {
+  fill: #377eb8;
+}
+
+.barD {
+  fill: #e41a1c;
+}
+
+
+.x.axis path {
+  display: none;
+}
+
+.x.axisTime path {
+  fill: none;
+  stroke: #d9d9d9;
+  shape-rendering: crispEdges;
+}
+
+
+/* page style */
+
+body {
+    position:relative;
+    background-size: 100% auto;
+	 font: 10px sans-serif;
+}
+
+@font-face{
+    font-family: Arial;
+}
+
+.canvas {
+    position: absolute;
+    top: 160px;
+    left: 0px;
+    margin-left: 40px;
+    margin-right: 40px;
+    float: left;
+    background-color: white;
+    visibility: visible;
+ }
+
+ 
+
+.map {
+    position: relative;
+    color: white;
+    text-align: center;
+    font-family: Trebuchet MS;
+    text-shadow: 0 1px 0 rgba(0,0,0,.5);
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.legend_lines {
+stroke: #cccccc;
+   stroke-width: 0.7;
+   fill: none;
+
+}
+
+.legend {
+  font-size: 10px;
+
+}
+
+.legend2 {
+  font-size: 10px;
+}
+
+.legend_absolut {
+  font-size: 10px;
+ 
+}
+
+.legend_relative {
+  font-size: 9px;
+  fill: #636363;
+}
+
+.legend_relative2 {
+  font-size: 9px;
+    fill: #636363;
+}
+
+.legend_relative3 {
+  font-size: 9px;
+    fill: #636363;
+}
+
+.legend_relative4 {
+  font-size: 9px;
+    fill: #636363;
+}
+
+.legend_relative5 {
+  font-size: 9px;
+    fill: #636363;
+}
+
+.legend_relative6 {
+  font-size: 9px;
+    fill: #636363;
+}
+
+#description {
+    min-height: 100px;
+}
+
+#aboutÂ {
+    height: 100px;
+}
+
+.text{
+    width: 300px;
+    float: left;
+}
+
+.cover {
+    margin-right: 20px;
+    margin-top: 10px;
+    margin-left: 50px;
+    float: right;
+}
+
+.buttons {
+position: absolute;
+    font-family: Trebuchet MS;
+    font-size: 12px;
+    top: 385px;
+	margin-top: 5px;
+    left: 70px;
+	float: left;
+    text-align: left;
+
+}
+
+#Content {
+	position: relative;
+	width: 1400px;
+	height: 800px;
+	left: 0;
+	right: 0;
+	text-align: center;
+	background-color: white;
+	margin-left: auto; 
+	margin-right: auto;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	display: block;
+	border: 1px solid #ccc;
+	border-radius: 15px;
+} 
+
+#Map {
+	position: absolute;
+	 width: 510px;
+        height: 330px;
+		float: left;
+	top: -120px;
+	left: 30px;
+	
+	
+	
+} 
+
+#ErrorbarChart {
+	position: relative;
+	width: 600px;
+    height: 400px;
+	 margin-left: 20px;
+	margin-right: 20px;
+	top: -130px;
+	right: 0px;
+	float: right;
+    visibility: visible;
+	
+	
+	
+}
+
+#Timeline {
+	position: absolute;
+	width: 800px;
+    height: 500px;
+	float: left;
+	left: -10px;
+	top: 450px;
+	
+	
+}
+
+#Help {
+    position: absolute;
+	width: 50px;
+	height: 20px;
+	float: right;
+	right: 20px;
+	top: 20px;
+    font-family: Trebuchet MS;
+    font-size: 14px;
+    text-align: left;
+}
+
+#History {
+    position: absolute;
+	width: 150px;
+	height: 20px;
+	float: right;
+	right: 80px;
+	top: 20px;
+    font-family: Trebuchet MS;
+    font-size: 14px;
+    text-align: left;
+}
+
+#header {
+    position: absolute;
+	width: 500px;
+	height: 20px;
+    font-family: Trebuchet MS;
+    font-size: 9px;
+    font-weight: bold;
+    top: 0px;
+    left: 70px;
+    text-align: left;
+}
+
+
+#Help a:link {
+	
+	color: #737373;
+}
+
+#Help a:hover {
+	text-decoration: none;
+	color: black;
+}
+
+#Help a:visited{
+	color: black;
+}
+
+#History a:link {
+
+	color: #737373;
+}
+
+#History a:hover {
+	text-decoration: none;
+	color: black;
+}
+
+#History a:visited{
+	color: black;
+}
+
+#footer {
+    position: absolute;
+    font-family: Trebuchet MS;
+    font-size: 11px;
+    bottom: 5px;
+    left: 20px;
+    text-align: left;
+}
+
+
+
