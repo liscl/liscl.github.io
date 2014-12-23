@@ -1,0 +1,8 @@
+{
+"type": "FeatureCollection",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:EPSG::37001" } },
+                                                                                
+"features": [
+{ "type": "Feature", "properties": { "id": 1, "name": "corps2" }, "geometry": { "type": "LineString", "coordinates": [ [ 28.558739345226961, 54.358743836370699 ], [ 28.370186388382717, 54.373365419829689 ], [ 28.305371309467507, 54.345649881034291 ], [ 28.267835304169811, 54.329064204274843 ] ] } }
+]
+}
