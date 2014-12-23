@@ -1,0 +1,8 @@
+{
+"type": "FeatureCollection",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:EPSG::37001" } },
+                                                                                
+"features": [
+{ "type": "Feature", "properties": { "id": 5, "name": "Imperial Guard (young)", "chambray": "1500", "wilson": "3000", "fain": "2200", "gourgaud": "2200", "average": "2225" }, "geometry": { "type": "Point", "coordinates": [ 28.818436126065681, 54.267959079371629 ] } }
+]
+}
