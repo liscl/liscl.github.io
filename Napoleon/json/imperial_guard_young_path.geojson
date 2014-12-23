@@ -1,0 +1,8 @@
+{
+"type": "FeatureCollection",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:EPSG::37001" } },
+                                                                                
+"features": [
+{ "type": "Feature", "properties": { "id": 6, "name": "imperial guard old" }, "geometry": { "type": "LineString", "coordinates": [ [ 28.818436126065681, 54.267959079371629 ], [ 28.608496375505304, 54.29327405968867 ], [ 28.371277551327417, 54.359398534137519 ], [ 28.320429358104377, 54.338011740421393 ], [ 28.328465264803915, 54.30833210832553 ] ] } }
+]
+}
