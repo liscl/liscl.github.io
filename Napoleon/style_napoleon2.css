@@ -1,0 +1,581 @@
+
+
+#borderPath {
+    stroke: black;
+    stroke-width: 3;
+    fill: none;
+}
+
+#borderPath2 {
+    stroke: black;
+    stroke-width: 1.5;
+    fill: none;
+}
+
+/* basemap style */
+
+.berezina {
+   stroke: blue;
+   stroke-width: 1;
+   fill: none;
+}
+
+.places{
+	
+
+	fill: black;
+
+  }
+
+.bridge{
+
+	stroke: none;
+   stroke-width: 0.7;
+   fill: white;
+   
+  }
+  
+    .bridge2{
+
+	stroke: black;
+   stroke-width: 2;
+   fill: none;
+   
+  }
+  
+   .arrows{
+	
+   fill: grey;
+   
+  }
+  
+/* corps_before style*/
+  
+.corps1_4_before{
+	stroke-width: 3.7125;
+	stroke:#fccde5;
+    fill: #fccde5;
+   
+   
+  }
+  
+ .corps2_before{
+	stroke-width: 12.1695;
+	stroke: #bebada;
+	   fill: #bebada;
+
+   
+  }
+  
+ .corps3_5_before{
+	   stroke-width: 6.45;
+	  stroke: #fb8072;
+	   fill: #fb8072;
+	   
+   
+  }
+  
+  .corps9_before{
+	stroke-width: 19.875;
+	stroke: #80b1d3;
+	   fill: #80b1d3;
+    
+   
+  }
+  
+  .corps9_before_dummy{
+	stroke-width: 15;
+	stroke: #80b1d3;
+	   fill: #80b1d3;
+    
+   
+  }
+  
+ .imperial_guard_old_before{
+	stroke-width: 7.959;
+	stroke: #b3de69;
+	   fill: #b3de69;
+    
+   
+  }
+  
+.imperial_guard_young_before{
+	   stroke-width: 3.3375;
+	   stroke: #8dd3c7;
+	   fill: #8dd3c7;
+	   
+  
+   
+  }
+ 
+/* corps_crossing style*/
+  
+.corps1_4_crossing{
+
+   fill: #737373;
+   
+  }
+  
+ .corps2_crossing{
+
+   fill: #737373;
+   
+  }
+  
+ .corps3_5_crossing{
+
+   fill: #737373;
+   
+  }
+  
+  .corps9_crossing{
+
+   fill: #737373;
+   
+  }
+  
+ .imperial_guard_old_crossing{
+
+   fill: #737373;
+   
+  }
+  
+.imperial_guard_young_crossing{
+	
+  fill: #737373;
+   
+  }
+ 
+/* corps_after style*/
+  
+.corps1_4_after{
+
+	
+   stroke-width: 1.85625;
+   stroke: #fccde5;
+   fill: #fccde5;
+   
+  }
+  
+ .corps2_after{
+
+	
+   stroke-width: 6.08475;
+   stroke: #bebada;
+   fill: #bebada;
+   
+  }
+  
+ .corps3_5_after{
+
+	
+   stroke-width: 3.225;
+   stroke: #fb8072;
+   fill: #fb8072;
+   
+  }
+  
+  .corps9_after{
+
+	
+   stroke-width: 9.9375;
+   stroke: #80b1d3;
+   fill: #80b1d3;
+   
+  }
+  
+ .imperial_guard_old_after{
+
+	
+   stroke-width: 3.9795;
+  stroke: #b3de69;
+   fill: #b3de69;
+   
+  }
+  
+.imperial_guard_young_after{
+
+	
+   stroke-width: 1.66875;
+   stroke: #8dd3c7;
+   fill: #8dd3c7;
+   
+  }
+  
+/* corps_path style */
+.corps_path{
+	stroke: grey;
+   stroke-width: 1;
+   fill: none;
+   
+  }
+ 
+/* poiplaces style */
+.poiplaces {
+      stroke-width: 4;
+	  stroke: black;
+    fill: black;
+	
+}
+
+.poiplaces:hover {
+    stroke-width: 5;
+        stroke: orange;
+		fill: orange;
+}
+
+
+
+.label.active {
+    fill:white;
+}
+
+.label {
+    fill:white;
+    font-size: 8px;
+    font-family: Trebuchet MS;
+    text-align: left;
+    text-anchor: middle;
+}
+
+.label:hover {
+    font-size: 12px;                
+}
+
+div.tooltip {
+      position: absolute;
+    text-align: left;
+    width: auto;
+    min-height: 20px;
+    padding: 4px;
+    font: 12px sans-serif;
+    background: aliceblue;   //farbe infofenster 
+    border: 0px;
+    border-radius: 8px;
+    pointer-events: none;
+}
+
+/* bar chart */
+
+.y.axisLeft text {
+    fill: black;
+}
+
+.y.axisUncertainty text {
+    fill: black;
+}
+.y.axisUncertainty2 text {
+    fill: black;
+}
+
+.x.axisTime path {
+  fill: none;
+  stroke: #d9d9d9;
+  shape-rendering: crispEdges;
+}
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #d9d9d9;
+  shape-rendering: crispEdges;
+}
+
+.barA {
+  fill: #9ebcda;
+}
+
+.barB {
+  fill: #8856a7;
+}
+
+.barC_before {
+  fill: #9ebcda;
+}
+
+.barD_after {
+  fill: #8856a7;
+}
+
+.median {
+  fill: black;
+}
+
+
+
+.x.axis path {
+  display: none;
+}
+
+
+.x.axisUncertainty path {
+  display: none;
+}
+
+.x.axisUncertainty2 path {
+  display: none;
+}
+
+/* page style */
+
+body {
+    position:relative;
+    background-size: 100% auto;
+	 font: 10px sans-serif;
+}
+
+@font-face{
+    font-family: Arial;
+}
+
+
+.canvas {
+  position: absolute;
+    top: 160px;
+    left: 0px;
+    margin-left: 40px;
+    margin-right: 40px;
+    float: left;
+    background-color: white;
+    visibility: visible;
+}
+
+/* Gridline styling */
+      #graph .grid .tick {
+          stroke: grey;
+          shape-rendering: crispEdges;
+      }
+      #graph .grid path {
+          	stroke-width: 1;
+			
+      }
+	  
+
+
+.map {
+    position: relative;
+    left: 270px;
+    top: -20px;
+    color: white;
+    text-align: center;
+    font-family: Trebuchet MS;
+    text-shadow: 0 1px 0 rgba(0,0,0,.5);
+    font-size: 15px;
+    cursor: pointer;
+}
+
+#chart{
+    position: relative;
+    top: 50px;
+	margin-left: 50px;
+	margin-top: 20px;
+    float: left;
+	margin-left: 20px;
+}
+
+
+.legend {
+  font-size: 12px;
+}
+
+
+.legend_relative {
+  font-size: 9px;
+  fill: #636363;
+}
+
+.legend_relative2 {
+  font-size: 9px;
+    fill: #636363;
+}
+
+.legend_relative3 {
+  font-size: 9px;
+    fill: #636363;
+}
+
+.legend_relative4 {
+  font-size: 9px;
+    fill: #636363;
+}
+
+.legend_relative5 {
+  font-size: 9px;
+    fill: #636363;
+}
+
+.legend_relative6 {
+  font-size: 9px;
+    fill: #636363;
+}
+
+.legend_lines {
+stroke: #cccccc;
+   stroke-width: 0.7;
+   fill: none;
+
+}
+
+#description {
+    min-height: 100px;
+}
+
+#aboutÂ {
+    height: 100px;
+}
+
+.text{
+    width: 300px;
+    float: left;
+}
+
+.cover {
+    margin-right: 20px;
+    margin-top: 10px;
+    margin-left: 50px;
+    float: right;
+}
+
+.buttons {
+position: absolute;
+    font-family: Trebuchet MS;
+    font-size: 12px;
+    top: 445px;
+    left: 70px;
+	float: right;
+    text-align: left;
+
+}
+
+#Content {
+	position: relative;
+	width: 1400px;
+	height: 1000px;
+	left: 0;
+	right: 0;
+	background-color: white;
+	margin-left: auto; 
+	margin-right: auto;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	display: block;
+	border: 1px solid #ccc;
+	border-radius: 15px;
+} 
+
+#Map {
+	position: absolute;
+	 width: 500px;
+        height: 320px;
+		float: left;
+	top: -120px;
+	left: 30px;
+	
+} 
+
+#BarChart {
+		position: absolute;
+	width: 600px;
+    height: 350px;
+	top: 30px;
+	right: 75px;
+	float: right;
+	
+}
+
+#Timeline {
+	position: absolute;
+	width: 570px;
+    height: 300px;
+	float: left;
+	left: 0px;
+	top: 550px;
+	
+}
+
+#Uncertainty {
+		position: absolute;
+	width: 600px;
+    height: 300px;
+	top: 300px;
+	right: 20px;
+	float: right;
+	
+}
+
+#Help {
+  position: absolute;
+	width: 50px;
+	height: 20px;
+	float: right;
+	right: 20px;
+	top: 5px;
+    font-family: Trebuchet MS;
+    font-size: 14px;
+    text-align: left;
+}
+
+#History {
+    position: absolute;
+	width: 150px;
+	height: 20px;
+	float: right;
+	right: 80px;
+	top: 5px;
+    font-family: Trebuchet MS;
+    font-size: 14px;
+    text-align: left;
+}
+
+#Help a:link {
+
+	color: #737373;
+}
+
+#Help a:hover {
+	text-decoration: none;
+	color: black;
+}
+
+#Help a:visited{
+	color: black;
+}
+
+#History a:link {
+
+	color: #737373;
+}
+
+#History a:hover {
+	text-decoration: none;
+	color: black;
+}
+
+#History a:visited{
+	color: black;
+}
+
+#header {
+     position: absolute;
+	width: 500px;
+	height: 20px;
+    font-family: Trebuchet MS;
+    font-size: 9px;
+    font-weight: bold;
+    top: 0px;
+    left: 70px;
+    text-align: left;
+}
+
+
+#footer {
+    position: absolute;
+    font-family: Trebuchet MS;
+    font-size: 11px;
+    bottom: 5px;
+    left: 20px;
+    text-align: left;
+}
+
+
+
