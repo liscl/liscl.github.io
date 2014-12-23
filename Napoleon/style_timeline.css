@@ -1,0 +1,271 @@
+	.chart {
+			shape-rendering: crispEdges;
+		}
+
+		.mini text {
+			font: 9px sans-serif;	
+		}
+
+		.main text {
+			font: 12px sans-serif;	
+		}
+
+		.miniItem0 {
+			fill: #bdbdbd;
+			fill-opacity: .7;
+			stroke-width: 6;	
+		}
+
+		.miniItem1 {
+			fill: #bdbdbd;
+			fill-opacity: .7;
+			stroke-width: 6;	
+		}
+		
+		
+		.miniItem2 {
+			fill: #bdbdbd;
+			fill-opacity: .7;
+			stroke-width: 6;	
+		}
+		
+		.miniItem3 {
+			fill: #bdbdbd;
+			fill-opacity: .7;
+			stroke-width: 6;	
+		}
+
+		.miniItem4 {
+			fill: #bdbdbd;
+			fill-opacity: .7;
+			stroke-width: 6;	
+		}
+
+		.miniItem5 {
+			fill: #bdbdbd;
+			fill-opacity: .7;
+			stroke-width: 6;	
+		}
+
+		.brush .extent {
+			stroke: gray;
+			fill: dodgerblue;
+			fill-opacity: .365;
+		}
+		
+		.blue0 {
+			fill: #fccde5;
+			
+					
+		}
+		
+		.blue1 {
+			fill: #bebada;
+			
+					
+		}
+		
+		.blue2 {
+			fill: #fb8072;
+			
+					
+		}
+		
+		.blue3 {
+			fill: #80b1d3;
+			
+					
+		}
+		
+		.blue4 {
+			fill: #b3de69;
+			
+					
+		}
+		
+		.blue5 {
+			fill: #8dd3c7;
+			
+					
+		}
+		
+		
+		
+		.boxblue0 {
+			fill: #fccde5;
+			
+					
+		}
+		
+		.boxblue1 {
+			fill: #bebada;
+			
+					
+		}
+		
+		.boxblue2 {
+			fill: #fb8072;
+			
+					
+		}
+		
+		.boxblue3 {
+			fill: #80b1d3;
+			
+					
+		}
+		
+		.boxblue4 {
+			fill: #b3de69;
+			
+					
+		}
+		
+		.boxblue5 {
+			fill: #8dd3c7;
+			
+					
+		}
+		
+		
+		
+		.red0 {
+			fill: #fccde5;
+			
+		}
+		
+		.red1 {
+			fill: #bebada;
+			
+		}
+		
+		.red2 {
+			fill: #fb8072;
+			
+		}
+		
+		.red3 {
+			fill: #80b1d3;
+			
+		}
+		
+		.red4 {
+			fill: #b3de69;
+			
+		}
+		
+		.red5 {
+			fill: #8dd3c7;
+			
+		}
+		
+		.boxred0 {
+			fill: #fccde5;
+			
+		}
+		
+		.boxred1 {
+			fill: #bebada;
+			
+		}
+		
+		.boxred2 {
+			fill: #fb8072;
+			
+		}
+		
+		.boxred3 {
+			fill: #80b1d3;
+			
+		}
+		
+		.boxred4 {
+			fill:#b3de69;
+			
+		}
+		
+		.boxred5 {
+			fill: #8dd3c7;
+			
+		}
+	
+		
+		.before0_relative {
+			fill: #fccde5;
+			
+			
+				
+		}
+		
+		.before1_relative {
+		fill: #bebada;
+			
+			
+				
+		}
+		
+		.before2_relative {
+		fill: #fb8072;
+			
+			
+				
+		}
+		
+		.before3_relative {
+			fill: #80b1d3;
+		
+			
+				
+		}
+		
+		.before4_relative {
+			fill: #b3de69;
+		
+			
+				
+		}
+		
+		.before5_relative {
+			fill: #8dd3c7;
+			
+				
+		}
+		
+		.after0_relative {
+			fill: #fccde5;
+			
+				
+		}
+		
+		.after1_relative {
+			fill: #bebada;
+			
+				
+		}
+		
+		.after2_relative {
+			fill: #fb8072;
+			
+				
+		}
+		
+		.after3_relative {
+			fill: #80b1d3;
+			
+				
+		}
+		
+		.after4_relative {
+			fill: #b3de69;
+			
+		}
+		
+		.after5_relative {
+			fill: #8dd3c7;
+			
+				
+		}
+		
+		
+		
+		
