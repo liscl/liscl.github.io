@@ -1,0 +1,8 @@
+{
+"type": "FeatureCollection",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:EPSG::37001" } },
+                                                                                
+"features": [
+{ "type": "Feature", "properties": { "id": 1, "name": "Corps II", "chambray": "7000", "wilson": "7800", "fain": "9300", "gourgaud": "8350", "average": "8113" }, "geometry": { "type": "Point", "coordinates": [ 28.558302880049084, 54.358743836370714 ] } }
+]
+}
