@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+	<title>Napoleon</title>
+	
+	<script src="http://d3js.org/d3.v3.min.js"></script>	
+	<script src="http://d3js.org/topojson.v0.min.js"></script>
+	<script src="http://d3js.org/d3.geo.tile.v0.min.js"></script>
+<script src="http://d3js.org/topojson.v1.min.js"></script>
+	
+	
+    <link rel="stylesheet" type="text/css" href="style_napoleon2.css">
+	<link rel="stylesheet" type="text/css" href="style_timeline.css">
+		<link rel="stylesheet" type="text/css" href="style_highlight.css">
+		<link rel="stylesheet" type="text/css" href="style_boxplot.css">
+
+    <!-- include all external script files -->
+    <script type="text/javascript" src="map_script.js"></script>
+		 <script type="text/javascript" src="barchartUncertainty_script2.js"></script>
+
+	 <script type="text/javascript" src="barChart_script.js"></script>
+	<script type="text/javascript" src="timeline_script2.js"></script>
+
+
+
+</head>
+
+<body>
+<div id="Content">
+    <div id="header"><h1>The Berezina river crossing - 26.-29. November 1812</h1></div> 
+<div id = "Map"></div>
+<div id = "BarChart"></div>
+<div id = "Timeline"></div>
+<div id = "Uncertainty"></div>
+<div id = "Help"><a href="help2.html">Help</a></div>
+<div id = "History"><a href="history2.html">Historical Information</a></div>
+	
+
+
+	<!-- set up the main map container (parameters) and call the external functions -->
+	<script>
+    "use strict";
+	
+	//div's
+	d3.selectAll("#Map").append("svg");
+	d3.selectAll("#Uncertainty").append("svg");
+	d3.selectAll("#BarChart").append("svgChart");
+	d3.selectAll("#Timeline").append("chart");
+	
+	
+	
+	
+    // define variables
+	var margin = {top: 0, right: 0, bottom: 0, left: 0}, 
+        width = 550,
+        height = 370;
+
+
+		
+    var centered;
+
+    // define projection parameters
+	var projection = d3.geo.mercator()
+			.center([28.88934, 54.260112])
+			.rotate([0,0])
+			.scale(39000);
+			
+
+	
+	 // create path object 
+    var path = d3.geo.path().projection(projection);
+
+    // create svg canvas to draw map on
+    var svg = d3.select("#Map").append("svg")
+		.attr("width", width)
+		.attr("height", height)
+        .attr("border", 3)
+        .attr("class", "canvas");
+		
+
+    // create group object g
+	var g = svg.append("g");
+
+
+
+    // create div object to use for dynamic tooltip
+    var div = d3.select("body")
+        .append("div")
+        .attr("class", "tooltip")
+        .style("opacity", 0);
+
+    // call map function, UncertaintyChart, Timeline, Legend
+    
+	
+	drawmap();
+	chartBeforeAfter ();
+	drawTimeline ();
+	drawErrorBarChart ();
+	drawlegend();
+
+		
+//function to clear all mouseover
+function clearAll(d) {
+	
+	 d3.selectAll(".corps2_before_highlight").attr("class", "corps2_before"),
+	 d3.selectAll(".corps1_4_before_highlight").attr("class", "corps1_4_before"),
+	 d3.selectAll(".corps3_5_before_highlight").attr("class", "corps3_5_before"),
+	 d3.selectAll(".corps9_before_highlight").attr("class", "corps9_before"),
+	  d3.selectAll(".corps9_before_dummy_highlight").attr("class", "corps9_before_dummy"),
+	 d3.selectAll(".imperial_guard_old_before_highlight").attr("class", "imperial_guard_old_before"),
+	 d3.selectAll(".imperial_guard_young_before_highlight").attr("class", "imperial_guard_young_before"),
+	 d3.selectAll(".corps2_before_relative_highlight").attr("class", "corps2_before_relative"),
+	 d3.selectAll(".corps1_4_before_relative_highlight").attr("class", "corps1_4_before_relative"),
+	 d3.selectAll(".corps3_5_before_relative_highlight").attr("class", "corps3_5_before_relative"),
+	 d3.selectAll(".corps9_before_relative_highlight").attr("class", "corps9_before_relative"),
+	 d3.selectAll(".imperial_guard_old_before_relative_highlight").attr("class", "imperial_guard_old_before_relative"),
+	 d3.selectAll(".imperial_guard_young_before_relative_highlight").attr("class", "imperial_guard_young_before_relative"),
+	 d3.selectAll(".corps2_after_highlight").attr("class", "corps2_after"),
+	 d3.selectAll(".corps1_4_after_highlight").attr("class", "corps1_4_after"),
+	 d3.selectAll(".corps3_5_after_highlight").attr("class", "corps3_5_after"),
+	 d3.selectAll(".corps9_after_highlight").attr("class", "corps9_after"),
+	 d3.selectAll(".imperial_guard_old_after_highlight").attr("class", "imperial_guard_old_after"),
+	 d3.selectAll(".imperial_guard_young_after_highlight").attr("class", "imperial_guard_young_after"),
+	 d3.selectAll(".corps2_after_relative_highlight").attr("class", "corps2_after_relative"),
+	 d3.selectAll(".corps1_4_after_relative_highlight").attr("class", "corps1_4_after_relative"),
+	 d3.selectAll(".corps3_5_after_relative_highlight").attr("class", "corps3_5_after_relative"),
+	 d3.selectAll(".corps9_after_relative_highlight").attr("class", "corps9_after_relative"),
+	 d3.selectAll(".imperial_guard_old_after_relative_highlight").attr("class", "imperial_guard_old_after_relative"),
+	 d3.selectAll(".imperial_guard_young_after_relative_highlight").attr("class", "imperial_guard_young_after_relative"),
+//	 d3.selectAll(".corps2_crossing_highlight").attr("class", "corps2_crossing"),
+	// d3.selectAll(".corps1_4_crossing_highlight").attr("class", "corps1_4_crossing"),
+	// d3.selectAll(".corps3_5_crossing_highlight").attr("class", "corps3_5_crossing"),
+	// d3.selectAll(".corps9_crossing_highlight").attr("class", "corps9_crossing"),
+	// d3.selectAll(".imperial_guard_old_crossing_highlight").attr("class", "imperial_guard_old_crossing"),
+	// d3.selectAll(".imperial_guard_young_crossing_highlight").attr("class", "imperial_guard_young_crossing"),
+	 d3.selectAll(".miniItem_highlight0b").attr("class", "blue1"),
+	 d3.selectAll(".miniItem_highlight1b").attr("class", "blue0"),
+	 d3.selectAll(".miniItem_highlight2b").attr("class", "blue2"),
+	 d3.selectAll(".miniItem_highlight3b").attr("class", "blue3"),
+	 d3.selectAll(".miniItem_highlight4b").attr("class", "blue4"),
+	 d3.selectAll(".miniItem_highlight5b").attr("class", "blue5"),
+	 d3.selectAll(".miniItem_highlight0a").attr("class", "red1"),
+	 d3.selectAll(".miniItem_highlight1a").attr("class", "red0"),
+	 d3.selectAll(".miniItem_highlight2a").attr("class", "red2"),
+	 d3.selectAll(".miniItem_highlight3a").attr("class", "red3"),
+	 d3.selectAll(".miniItem_highlight4a").attr("class", "red4"),
+	 d3.selectAll(".miniItem_highlight5a").attr("class", "red5"),
+	 d3.selectAll(".miniItem_highlight0c").attr("class", "miniItem0"),
+	 d3.selectAll(".miniItem_highlight1c").attr("class", "miniItem4"),
+	 d3.selectAll(".miniItem_highlight2c").attr("class", "miniItem1"),
+	 d3.selectAll(".miniItem_highlight3c").attr("class", "miniItem5"),
+	 d3.selectAll(".miniItem_highlight4c").attr("class", "miniItem2"),
+	 d3.selectAll(".miniItem_highlight5c").attr("class", "miniItem3"),
+	  d3.selectAll(".BarA_highlight").attr("class", "barA"),
+	 d3.selectAll(".BarB_highlight").attr("class", "barB"),
+	   d3.selectAll(".BarC_highlight").attr("class", "barC"),
+	 d3.selectAll(".BarD_highlight").attr("class", "barD"),
+	  d3.selectAll(".boxblue_highlight0").attr("class", "boxblue0"),
+	 d3.selectAll(".boxblue_highlight1").attr("class", "boxblue1"),
+	 d3.selectAll(".boxblue_highlight2").attr("class", "boxblue2"),
+	 d3.selectAll(".boxblue_highlight3").attr("class", "boxblue3"),
+	 d3.selectAll(".boxblue_highlight4").attr("class", "boxblue4"),
+	 d3.selectAll(".boxblue_highlight5").attr("class", "boxblue5"),
+	 d3.selectAll(".boxred_highlight0").attr("class", "boxred0"),
+	 d3.selectAll(".boxred_highlight1").attr("class", "boxred1"),
+	 d3.selectAll(".boxred_highlight2").attr("class", "boxred2"),
+	 d3.selectAll(".boxred_highlight3").attr("class", "boxred3"),
+	 d3.selectAll(".boxred_highlight4").attr("class", "boxred4"),
+	 d3.selectAll(".boxred_highlight5").attr("class", "boxred5");
+
+	
+	
+	}
+	
+//functions for mouseover
+// click on poi_before
+function clickCorps2_before(d) {
+
+
+
+	
+	 d3.selectAll(".corps2_before").attr("class", "corps2_before_highlight"),
+	d3.selectAll(".barA").filter(function(d) { return d.before == "8113"; }).attr("class", "BarA_highlight"),
+	d3.selectAll(".blue1").attr("class", "miniItem_highlight0b"),
+	d3.selectAll(".boxblue1").attr("class", "boxblue_highlight1");
+
+    }
+
+function clickCorps1_4_before(d) {
+	
+	 d3.selectAll(".corps1_4_before").attr("class", "corps1_4_before_highlight"),
+		d3.selectAll(".barA").filter(function(d) { return d.before == "2475"; }).attr("class", "BarA_highlight"),
+	d3.selectAll(".blue0").attr("class", "miniItem_highlight1b"),
+	d3.selectAll(".boxblue0").attr("class", "boxblue_highlight0");
+
+    }
+	
+function clickCorps3_5_before(d) {
+	
+	 d3.selectAll(".corps3_5_before").attr("class", "corps3_5_before_highlight"),
+	 	d3.selectAll(".barA").filter(function(d) {  return d.before == "4300"; }).attr("class", "BarA_highlight"),
+	d3.selectAll(".blue2").attr("class", "miniItem_highlight2b"),
+	d3.selectAll(".boxblue2").attr("class", "boxblue_highlight2");;
+
+    }
+	
+function clickCorps9_before(d) {
+	
+	 d3.selectAll(".corps9_before").attr("class", "corps9_before_highlight"),
+	  d3.selectAll(".corps9_before_dummy").attr("class", "corps9_before_dummy_highlight"),
+		d3.selectAll(".barA").filter(function(d) { return d.before == "13250"; }).attr("class", "BarA_highlight"),
+	d3.selectAll(".blue3").attr("class", "miniItem_highlight3b"),
+	d3.selectAll(".boxblue3").attr("class", "boxblue_highlight3");
+
+    }
+
+function clickImperial_Guard_Old_before(d) {
+
+	 d3.selectAll(".imperial_guard_old_before").attr("class", "imperial_guard_old_before_highlight"),
+		d3.selectAll(".barA").filter(function(d) { return d.before == "5306"; }).attr("class", "BarA_highlight"),
+	d3.selectAll(".blue4").attr("class", "miniItem_highlight4b"),
+	d3.selectAll(".boxblue4").attr("class", "boxblue_highlight4");;
+
+    }
+	
+function clickImperial_Guard_Young_before(d) {
+
+	 d3.selectAll(".imperial_guard_young_before").attr("class", "imperial_guard_young_before_highlight"),
+		d3.selectAll(".barA").filter(function(d) { return d.before == "2225"; }).attr("class", "BarA_highlight"),
+	d3.selectAll(".blue5").attr("class", "miniItem_highlight5b"),
+	d3.selectAll(".boxblue5").attr("class", "boxblue_highlight5");
+
+    }
+	
+// click on poi_after
+function clickCorps2_after(d) {
+
+	 d3.selectAll(".corps2_after").attr("class", "corps2_after_highlight"),
+	d3.selectAll(".barB").filter(function(d) { return d.after == "4057"; }).attr("class", "BarB_highlight"),
+	d3.selectAll(".red1").attr("class", "miniItem_highlight0a"),
+	d3.selectAll(".boxred1").attr("class", "boxred_highlight1");
+
+    }
+
+function clickCorps1_4_after(d) {
+
+	 d3.selectAll(".corps1_4_after").attr("class", "corps1_4_after_highlight"),
+		d3.selectAll(".barB").filter(function(d) { return d.after == "1238"; }).attr("class", "BarB_highlight"),
+	d3.selectAll(".red0").attr("class", "miniItem_highlight1a"),
+	d3.selectAll(".boxred0").attr("class", "boxred_highlight0");
+
+    }
+	
+function clickCorps3_5_after(d) {
+
+	 d3.selectAll(".corps3_5_after").attr("class", "corps3_5_after_highlight"),
+		d3.selectAll(".barB").filter(function(d) { return d.after == "2150"; }).attr("class", "BarB_highlight"),
+	d3.selectAll(".red2").attr("class", "miniItem_highlight2a"),
+	d3.selectAll(".boxred2").attr("class", "boxred_highlight2");
+
+    }
+	
+function clickCorps9_after(d) {
+
+	 d3.selectAll(".corps9_after").attr("class", "corps9_after_highlight"),
+	 	d3.selectAll(".barB").filter(function(d) { return d.after == "6625"; }).attr("class", "BarB_highlight"),
+	d3.selectAll(".red3").attr("class", "miniItem_highlight3a"),
+	d3.selectAll(".boxred3").attr("class", "boxred_highlight3");
+
+    }
+
+function clickImperial_Guard_Old_after(d) {
+	
+	 d3.selectAll(".imperial_guard_old_after").attr("class", "imperial_guard_old_after_highlight"),
+	 	d3.selectAll(".barB").filter(function(d) { return d.after == "2653"; }).attr("class", "BarB_highlight"),
+	d3.selectAll(".red4").attr("class", "miniItem_highlight4a"),
+	d3.selectAll(".boxred4").attr("class", "boxred_highlight4");
+
+    }
+	
+function clickImperial_Guard_Young_after(d) {
+
+	 d3.selectAll(".imperial_guard_young_after").attr("class", "imperial_guard_young_after_highlight"),
+		d3.selectAll(".barB").filter(function(d) { return d.after == "1113"; }).attr("class", "BarB_highlight"),
+	d3.selectAll(".red5").attr("class", "miniItem_highlight5a"),
+	d3.selectAll(".boxred5").attr("class", "boxred_highlight5");
+
+    }
+	
+// click on poi_crossing
+function clickCorps2_crossing(d) {
+	
+	// d3.selectAll(".corps2_crossing").attr("class", "corps2_crossing_highlight"),
+			d3.selectAll(".miniItem0").filter(function(d) { return d.id == "bridge"; }).attr("class", "miniItem_highlight0c");
+
+    }
+
+function clickCorps1_4_crossing(d) {
+
+	// d3.selectAll(".corps1_4_crossing").attr("class", "corps1_4_crossing_highlight"),
+		d3.selectAll(".miniItem4").filter(function(d) { return d.id == "bridge"; }).attr("class", "miniItem_highlight1c");
+
+    }
+	
+function clickCorps3_5_crossing(d) {
+
+//	 d3.selectAll(".corps3_5_crossing").attr("class", "corps3_5_crossing_highlight"),
+	d3.selectAll(".miniItem1").filter(function(d) { return d.id == "bridge"; }).attr("class", "miniItem_highlight2c");
+
+    }
+	
+function clickCorps9_crossing(d) {
+
+	// d3.selectAll(".corps9_crossing").attr("class", "corps9_crossing_highlight"),
+	d3.selectAll(".miniItem5").filter(function(d) { return d.id == "bridge"; }).attr("class", "miniItem_highlight3c");
+
+    }
+
+function clickImperial_Guard_Old_crossing(d) {
+
+	// d3.selectAll(".imperial_guard_old_crossing").attr("class", "imperial_guard_old_crossing_highlight"),
+	d3.selectAll(".miniItem2").filter(function(d) { return d.id == "bridge"; }).attr("class", "miniItem_highlight4c");
+
+    }
+	
+function clickImperial_Guard_Young_crossing(d) {
+
+//	 d3.selectAll(".imperial_guard_young_crossing").attr("class", "imperial_guard_young_crossing_highlight"),
+	d3.selectAll(".miniItem3").filter(function(d) { return d.id == "bridge"; }).attr("class", "miniItem_highlight5c");
+
+    } 
+	
+	
+	
+	
+
+
+
+	</script> 
+<br>
+<br>
+<br>
+<br>
+
+
+    <div id="footer">&#169; Lisa Clemens, September 2014</div> 
+	</div>
+</body>
+
+</html>
