@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+	<title>Napoleon</title>
+	
+	<script src="http://d3js.org/d3.v3.min.js"></script>	
+	<script src="http://d3js.org/topojson.v0.min.js"></script>
+	
+	
+	
+	
+    <link rel="stylesheet" type="text/css" href="style_napoleon.css">
+	<link rel="stylesheet" type="text/css" href="style_timeline.css">
+	<link rel="stylesheet" type="text/css" href="style_highlight.css">
+
+    <!-- include all external script files -->
+    <script type="text/javascript" src="mapUncertainty_script.js"></script>
+	<script type="text/javascript" src="barchartUncertainty_script.js"></script>
+	<script type="text/javascript" src="timeline_script.js"></script>
+
+
+
+
+</head>
+
+<body>
+<div id="Content">
+    <div id="header"><h1>The Berezina river crossing - 26.-29. November 1812</h1></div><br><br><br>
+	
+
+
+
+<div id = "Map"></div>
+<div id = "ErrorbarChart"></div>
+<div id = "Timeline"></div>
+<div id = "Help"><a href="help.html">Help</a></div>
+<div id = "History"><a href="history.html">Historical Information</a></div>
+
+	<!-- set up the main map container (parameters) and call the external functions -->
+	<script>
+    "use strict";
+
+	//div's
+	d3.selectAll("#Map").append("svg");
+	d3.selectAll("#ErrorbarChart").append("svg");
+	d3.selectAll("#Timeline").append("chart");
+
+    // define variables
+	var margin = {top: 0, right: 0, bottom: 0, left: 0}, 
+        width = 510,
+        height = 330;
+		
+
+    var centered;
+
+    // define projection parameters
+	var projection = d3.geo.mercator()
+			.center([28.88034, 54.25112])
+			.rotate([0,0])
+			.scale(39000);
+
+    // create svg canvas to draw map on
+    var svg = d3.select("#Map").append("svg")
+		.attr("width", width)
+		.attr("height", height)
+        .attr("border", 3)
+        .attr("class", "canvas");
+
+    // create path object 
+    var path = d3.geo.path().projection(projection);
+
+    // create group object g
+	var g = svg.append("g");
+
+    // create div object to use for dynamic tooltip
+    var div = d3.select("body")
+        .append("div")
+        .attr("class", "tooltip")
+        .style("opacity", 0);
+
+
+		
+		
+    // call map function, Legend, ErrorBarChart, Timeline
+    
+	
+	drawmap();
+	drawlegend();
+	drawErrorBarChart();
+	drawTimeline ();
+	d3.selectAll(".line").attr("visibility", "hidden");
+d3.selectAll(".line2").attr("visibility", "hidden");
+	
+	
+function checkMin() {
+d3.selectAll(".line2").attr("visibility", "visible"),
+d3.selectAll(".corps1_4_before_relative").attr("visibility", "visible"),
+d3.selectAll(".corps2_before_relative").attr("visibility", "visible"),
+d3.selectAll(".corps3_5_before_relative").attr("visibility", "visible"),
+d3.selectAll(".corps9_before_relative").attr("visibility", "visible"),
+d3.selectAll(".imperial_guard_old_before_relative").attr("visibility", "visible"),
+d3.selectAll(".imperial_guard_young_before_relative").attr("visibility", "visible"),
+d3.selectAll(".corps1_4_before_relative_max").attr("visibility", "hidden"),
+d3.selectAll(".corps2_before_relative_max").attr("visibility", "hidden"),
+d3.selectAll(".corps3_5_before_relative_max").attr("visibility", "hidden"),
+d3.selectAll(".corps9_before_relative_max").attr("visibility", "hidden"),
+d3.selectAll(".imperial_guard_old_before_relative_max").attr("visibility", "hidden"),
+d3.selectAll(".imperial_guard_young_before_relative_max").attr("visibility", "hidden"),
+d3.selectAll(".corps1_4_before_relative_ave").attr("visibility", "hidden"),
+d3.selectAll(".corps2_before_relative_ave").attr("visibility", "hidden"),
+d3.selectAll(".corps3_5_before_relative_ave").attr("visibility", "hidden"),
+d3.selectAll(".corps9_before_relative_ave").attr("visibility", "hidden"),
+d3.selectAll(".imperial_guard_old_before_relative_ave").attr("visibility", "hidden"),
+d3.selectAll(".imperial_guard_young_before_relative_ave").attr("visibility", "hidden"),
+d3.selectAll(".corps1_4_after_relative").attr("visibility", "visible"),
+d3.selectAll(".corps2_after_relative").attr("visibility", "visible"),
+d3.selectAll(".corps3_5_after_relative").attr("visibility", "visible"),
+d3.selectAll(".corps9_after_relative").attr("visibility", "visible"),
+d3.selectAll(".imperial_guard_old_after_relative").attr("visibility", "visible"),
+d3.selectAll(".imperial_guard_young_after_relative").attr("visibility", "visible"),
+d3.selectAll(".corps1_4_after_relative_max").attr("visibility", "hidden"),
+d3.selectAll(".corps2_after_relative_max").attr("visibility", "hidden"),
+d3.selectAll(".corps3_5_after_relative_max").attr("visibility", "hidden"),
+d3.selectAll(".corps9_after_relative_max").attr("visibility", "hidden"),
+d3.selectAll(".imperial_guard_old_after_relative_max").attr("visibility", "hidden"),
+d3.selectAll(".imperial_guard_young_after_relative_max").attr("visibility", "hidden"),
+d3.selectAll(".corps1_4_after_relative_ave").attr("visibility", "hidden"),
+d3.selectAll(".corps2_after_relative_ave").attr("visibility", "hidden"),
+d3.selectAll(".corps3_5_after_relative_ave").attr("visibility", "hidden"),
+d3.selectAll(".corps9_after_relative_ave").attr("visibility", "hidden"),
+d3.selectAll(".imperial_guard_old_after_relative_ave").attr("visibility", "hidden"),
+d3.selectAll(".imperial_guard_young_after_relative_ave").attr("visibility", "hidden"),
+d3.selectAll(".line").attr("visibility", "hidden"),
+d3.selectAll(".median").attr("visibility", "hidden");
+
+}
+function checkAve() {
+d3.selectAll(".median").attr("visibility", "visible"),
+d3.selectAll(".corps1_4_before_relative").attr("visibility", "hidden"),
+d3.selectAll(".corps2_before_relative").attr("visibility", "hidden"),
+d3.selectAll(".corps3_5_before_relative").attr("visibility", "hidden"),
+//d3.selectAll(".corps9_before_relative").attr("visibility", "hidden"),        // dummy for google chrome
+d3.selectAll(".imperial_guard_old_before_relative").attr("visibility", "hidden"),
+d3.selectAll(".imperial_guard_young_before_relative").attr("visibility", "hidden"),
+d3.selectAll(".corps1_4_before_relative_max").attr("visibility", "hidden"),
+d3.selectAll(".corps2_before_relative_max").attr("visibility", "hidden"),
+d3.selectAll(".corps3_5_before_relative_max").attr("visibility", "hidden"),
+d3.selectAll(".corps9_before_relative_max").attr("visibility", "hidden"),
+d3.selectAll(".imperial_guard_old_before_relative_max").attr("visibility", "hidden"),
+d3.selectAll(".imperial_guard_young_before_relative_max").attr("visibility", "hidden"),
+d3.selectAll(".corps1_4_before_relative_ave").attr("visibility", "visible"),
+d3.selectAll(".corps2_before_relative_ave").attr("visibility", "visible"),
+d3.selectAll(".corps3_5_before_relative_ave").attr("visibility", "visible"),
+d3.selectAll(".corps9_before_relative_ave").attr("visibility", "visible"),
+d3.selectAll(".imperial_guard_old_before_relative_ave").attr("visibility", "visible"),
+d3.selectAll(".imperial_guard_young_before_relative_ave").attr("visibility", "visible"),
+d3.selectAll(".corps1_4_after_relative").attr("visibility", "hidden"),
+d3.selectAll(".corps2_after_relative").attr("visibility", "hidden"),
+d3.selectAll(".corps3_5_after_relative").attr("visibility", "hidden"),
+d3.selectAll(".corps9_after_relative").attr("visibility", "hidden"),
+d3.selectAll(".imperial_guard_old_after_relative").attr("visibility", "hidden"),
+d3.selectAll(".imperial_guard_young_after_relative").attr("visibility", "hidden"),
+d3.selectAll(".corps1_4_after_relative_max").attr("visibility", "hidden"),
+d3.selectAll(".corps2_after_relative_max").attr("visibility", "hidden"),
+d3.selectAll(".corps3_5_after_relative_max").attr("visibility", "hidden"),
+d3.selectAll(".corps9_after_relative_max").attr("visibility", "hidden"),
+d3.selectAll(".imperial_guard_old_after_relative_max").attr("visibility", "hidden"),
+d3.selectAll(".imperial_guard_young_after_relative_max").attr("visibility", "hidden"),
+d3.selectAll(".corps1_4_after_relative_ave").attr("visibility", "visible"),
+d3.selectAll(".corps2_after_relative_ave").attr("visibility", "visible"),
+d3.selectAll(".corps3_5_after_relative_ave").attr("visibility", "visible"),
+d3.selectAll(".corps9_after_relative_ave").attr("visibility", "visible"),
+d3.selectAll(".imperial_guard_old_after_relative_ave").attr("visibility", "visible"),
+d3.selectAll(".imperial_guard_young_after_relative_ave").attr("visibility", "visible"),
+d3.selectAll(".line").attr("visibility", "hidden"),
+d3.selectAll(".line2").attr("visibility", "hidden");
+
+}
+function checkMax() {
+d3.selectAll(".line").attr("visibility", "visible"),
+d3.selectAll(".corps1_4_before_relative").attr("visibility", "hidden"),
+d3.selectAll(".corps2_before_relative").attr("visibility", "hidden"),
+d3.selectAll(".corps3_5_before_relative").attr("visibility", "hidden"),
+//d3.selectAll(".corps9_before_relative").attr("visibility", "hidden"),   // dummy for google chrome
+d3.selectAll(".imperial_guard_old_before_relative").attr("visibility", "hidden"),
+d3.selectAll(".imperial_guard_young_before_relative").attr("visibility", "hidden"),
+d3.selectAll(".corps1_4_before_relative_max").attr("visibility", "visible"),
+d3.selectAll(".corps2_before_relative_max").attr("visibility", "visible"),
+d3.selectAll(".corps3_5_before_relative_max").attr("visibility", "visible"),
+d3.selectAll(".corps9_before_relative_max").attr("visibility", "visible"),
+d3.selectAll(".imperial_guard_old_before_relative_max").attr("visibility", "visible"),
+d3.selectAll(".imperial_guard_young_before_relative_max").attr("visibility", "visible"),
+d3.selectAll(".corps1_4_before_relative_ave").attr("visibility", "hidden"),
+d3.selectAll(".corps2_before_relative_ave").attr("visibility", "hidden"),
+d3.selectAll(".corps3_5_before_relative_ave").attr("visibility", "hidden"),
+d3.selectAll(".corps9_before_relative_ave").attr("visibility", "hidden"),
+d3.selectAll(".imperial_guard_old_before_relative_ave").attr("visibility", "hidden"),
+d3.selectAll(".imperial_guard_young_before_relative_ave").attr("visibility", "hidden"),
+d3.selectAll(".corps1_4_after_relative").attr("visibility", "hidden"),
+d3.selectAll(".corps2_after_relative").attr("visibility", "hidden"),
+d3.selectAll(".corps3_5_after_relative").attr("visibility", "hidden"),
+d3.selectAll(".corps9_after_relative").attr("visibility", "hidden"),
+d3.selectAll(".imperial_guard_old_after_relative").attr("visibility", "hidden"),
+d3.selectAll(".imperial_guard_young_after_relative").attr("visibility", "hidden"),
+d3.selectAll(".corps1_4_after_relative_max").attr("visibility", "visible"),
+d3.selectAll(".corps2_after_relative_max").attr("visibility", "visible"),
+d3.selectAll(".corps3_5_after_relative_max").attr("visibility", "visible"),
+d3.selectAll(".corps9_after_relative_max").attr("visibility", "visible"),
+d3.selectAll(".imperial_guard_old_after_relative_max").attr("visibility", "visible"),
+d3.selectAll(".imperial_guard_young_after_relative_max").attr("visibility", "visible"),
+d3.selectAll(".corps1_4_after_relative_ave").attr("visibility", "hidden"),
+d3.selectAll(".corps2_after_relative_ave").attr("visibility", "hidden"),
+d3.selectAll(".corps3_5_after_relative_ave").attr("visibility", "hidden"),
+d3.selectAll(".corps9_after_relative_ave").attr("visibility", "hidden"),
+d3.selectAll(".imperial_guard_old_after_relative_ave").attr("visibility", "hidden"),
+d3.selectAll(".imperial_guard_young_after_relative_ave").attr("visibility", "hidden"),
+d3.selectAll(".median").attr("visibility", "hidden"),
+d3.selectAll(".line2").attr("visibility", "hidden");
+
+}	
+	
+
+//function to clear all mouseover
+function clearAll(d) {
+	
+	
+	 d3.selectAll(".corps2_before_relative_highlight").attr("class", "corps2_before_relative"),
+	 d3.selectAll(".corps1_4_before_relative_highlight").attr("class", "corps1_4_before_relative"),
+	 d3.selectAll(".corps3_5_before_relative_highlight").attr("class", "corps3_5_before_relative"),
+	 d3.selectAll(".corps9_before_relative_highlight").attr("class", "corps9_before_relative"),
+	 d3.selectAll(".imperial_guard_old_before_relative_highlight").attr("class", "imperial_guard_old_before_relative"),
+	 d3.selectAll(".imperial_guard_young_before_relative_highlight").attr("class", "imperial_guard_young_before_relative"),
+	 d3.selectAll(".corps2_after_relative_highlight").attr("class", "corps2_after_relative"),
+	 d3.selectAll(".corps1_4_after_relative_highlight").attr("class", "corps1_4_after_relative"),
+	 d3.selectAll(".corps3_5_after_relative_highlight").attr("class", "corps3_5_after_relative"),
+	 d3.selectAll(".corps9_after_relative_highlight").attr("class", "corps9_after_relative"),
+	 d3.selectAll(".imperial_guard_old_after_relative_highlight").attr("class", "imperial_guard_old_after_relative"),
+	 d3.selectAll(".imperial_guard_young_after_relative_highlight").attr("class", "imperial_guard_young_after_relative"),
+	 d3.selectAll(".corps2_before_relative_ave_highlight").attr("class", "corps2_before_relative_ave"),
+	 d3.selectAll(".corps1_4_before_relative_ave_highlight").attr("class", "corps1_4_before_relative_ave"),
+	 d3.selectAll(".corps3_5_before_relative_ave_highlight").attr("class", "corps3_5_before_relative_ave"),
+	 d3.selectAll(".corps9_before_relative_ave_highlight").attr("class", "corps9_before_relative_ave"),
+	 d3.selectAll(".imperial_guard_old_before_relative_ave_highlight").attr("class", "imperial_guard_old_before_relative_ave"),
+	 d3.selectAll(".imperial_guard_young_before_relative_ave_highlight").attr("class", "imperial_guard_young_before_relative_ave"),
+	 d3.selectAll(".corps2_after_relative_ave_highlight").attr("class", "corps2_after_relative_ave"),
+	 d3.selectAll(".corps1_4_after_relative_ave_highlight").attr("class", "corps1_4_after_relative_ave"),
+	 d3.selectAll(".corps3_5_after_relative_ave_highlight").attr("class", "corps3_5_after_relative_ave"),
+	 d3.selectAll(".corps9_after_relative_ave_highlight").attr("class", "corps9_after_relative_ave"),
+	 d3.selectAll(".imperial_guard_old_after_relative_ave_highlight").attr("class", "imperial_guard_old_after_relative_ave"),
+	 d3.selectAll(".imperial_guard_young_after_relative_ave_highlight").attr("class", "imperial_guard_young_after_relative_ave"),
+	  d3.selectAll(".corps2_before_relative_max_highlight").attr("class", "corps2_before_relative_max"),
+	 d3.selectAll(".corps1_4_before_relative_max_highlight").attr("class", "corps1_4_before_relative_max"),
+	 d3.selectAll(".corps3_5_before_relative_max_highlight").attr("class", "corps3_5_before_relative_max"),
+	 d3.selectAll(".corps9_before_relative_max_highlight").attr("class", "corps9_before_relative_max"),
+	 d3.selectAll(".imperial_guard_old_before_relative_max_highlight").attr("class", "imperial_guard_old_before_relative_max"),
+	 d3.selectAll(".imperial_guard_young_before_relative_max_highlight").attr("class", "imperial_guard_young_before_relative_max"),
+	 d3.selectAll(".corps2_after_relative_max_highlight").attr("class", "corps2_after_relative_max"),
+	 d3.selectAll(".corps1_4_after_relative_max_highlight").attr("class", "corps1_4_after_relative_max"),
+	 d3.selectAll(".corps3_5_after_relative_max_highlight").attr("class", "corps3_5_after_relative_max"),
+	 d3.selectAll(".corps9_after_relative_max_highlight").attr("class", "corps9_after_relative_max"),
+	 d3.selectAll(".imperial_guard_old_after_relative_max_highlight").attr("class", "imperial_guard_old_after_relative_max"),
+	 d3.selectAll(".imperial_guard_young_after_relative_max_highlight").attr("class", "imperial_guard_young_after_relative_max"),
+	// d3.selectAll(".corps2_crossing_highlight").attr("class", "corps2_crossing"),
+	// d3.selectAll(".corps1_4_crossing_highlight").attr("class", "corps1_4_crossing"),
+	// d3.selectAll(".corps3_5_crossing_highlight").attr("class", "corps3_5_crossing"),
+	// d3.selectAll(".corps9_crossing_highlight").attr("class", "corps9_crossing"),
+	// d3.selectAll(".imperial_guard_old_crossing_highlight").attr("class", "imperial_guard_old_crossing"),
+	// d3.selectAll(".imperial_guard_young_crossing_highlight").attr("class", "imperial_guard_young_crossing"),
+	 d3.selectAll(".miniItem_highlight0b_relative").attr("class", "before0_relative"),
+	 d3.selectAll(".miniItem_highlight1b_relative").attr("class", "before1_relative"),
+	 d3.selectAll(".miniItem_highlight2b_relative").attr("class", "before2_relative"),
+	 d3.selectAll(".miniItem_highlight3b_relative").attr("class", "before3_relative"),
+	 d3.selectAll(".miniItem_highlight4b_relative").attr("class", "before4_relative"),
+	 d3.selectAll(".miniItem_highlight5b_relative").attr("class", "before5_relative"),
+	 d3.selectAll(".miniItem_highlight0a_relative").attr("class", "after0_relative"),
+	 d3.selectAll(".miniItem_highlight1a_relative").attr("class", "after1_relative"),
+	 d3.selectAll(".miniItem_highlight2a_relative").attr("class", "after2_relative"),
+	 d3.selectAll(".miniItem_highlight3a_relative").attr("class", "after3_relative"),
+	 d3.selectAll(".miniItem_highlight4a_relative").attr("class", "after4_relative"),
+	 d3.selectAll(".miniItem_highlight5a_relative").attr("class", "after5_relative"),
+	 d3.selectAll(".miniItem_highlight0c").attr("class", "miniItem0"),
+	 d3.selectAll(".miniItem_highlight1c").attr("class", "miniItem4"),
+	 d3.selectAll(".miniItem_highlight2c").attr("class", "miniItem1"),
+	 d3.selectAll(".miniItem_highlight3c").attr("class", "miniItem5"),
+	 d3.selectAll(".miniItem_highlight4c").attr("class", "miniItem2"),
+	 d3.selectAll(".miniItem_highlight5c").attr("class", "miniItem3"),
+	 d3.selectAll(".BarC_highlight").attr("class", "barC"),
+	 d3.selectAll(".BarD_highlight").attr("class", "barD");
+
+	}
+
+//functions to mouseover
+// click on poi_before
+function clickCorps2_before(d) {
+	
+	 d3.selectAll(".corps2_before_relative").attr("class", "corps2_before_relative_highlight"),
+	  d3.selectAll(".corps2_before_relative_max").attr("class", "corps2_before_relative_max_highlight"),
+	   d3.selectAll(".corps2_before_relative_ave").attr("class", "corps2_before_relative_ave_highlight"),
+	d3.selectAll(".barC").filter(function(d) { return d.moe == "1187"; }).attr("class", "BarC_highlight"),
+	d3.selectAll(".before1_relative").attr("class", "miniItem_highlight1b_relative");
+
+    }
+
+function clickCorps1_4_before(d) {
+	
+	
+	 d3.selectAll(".corps1_4_before_relative").attr("class", "corps1_4_before_relative_highlight"),
+	 d3.selectAll(".corps1_4_before_relative_max").attr("class", "corps1_4_before_relative_max_highlight"),
+	 d3.selectAll(".corps1_4_before_relative_ave").attr("class", "corps1_4_before_relative_ave_highlight"),
+	d3.selectAll(".barC").filter(function(d) { return d.moe == "625"; }).attr("class", "BarC_highlight"),
+	d3.selectAll(".test").attr("class", "miniItem_highlight0b_relative"),
+	d3.selectAll(".before0_relative").attr("class", "miniItem_highlight0b_relative");
+
+    }
+	
+function clickCorps3_5_before(d) {
+
+	
+	 d3.selectAll(".corps3_5_before_relative").attr("class", "corps3_5_before_relative_highlight"),
+	 d3.selectAll(".corps3_5_before_relative_max").attr("class", "corps3_5_before_relative_max_highlight"),
+	 d3.selectAll(".corps3_5_before_relative_ave").attr("class", "corps3_5_before_relative_ave_highlight"),
+	d3.selectAll(".barC").filter(function(d) { return d.moe == "1100"; }).attr("class", "BarC_highlight"),
+	
+	d3.selectAll(".before2_relative").attr("class", "miniItem_highlight2b_relative");
+
+    }
+	
+function clickCorps9_before(d) {
+	
+	 
+	 d3.selectAll(".corps9_before_relative").attr("class", "corps9_before_relative_highlight"),
+	 d3.selectAll(".corps9_before_relative_ave").attr("class", "corps9_before_relative_ave_highlight"),
+	 d3.selectAll(".corps9_before_relative_max").attr("class", "corps9_before_relative_max_highlight"),
+	d3.selectAll(".barC").filter(function(d) { return d.moe == "5500"; }).attr("class", "BarC_highlight"),
+	
+	d3.selectAll(".before3_relative").attr("class", "miniItem_highlight3b_relative");
+
+    }
+
+function clickImperial_Guard_Old_before(d) {
+
+
+	 d3.selectAll(".imperial_guard_old_before_relative").attr("class", "imperial_guard_old_before_relative_highlight"),
+	 d3.selectAll(".imperial_guard_old_before_relative_ave").attr("class", "imperial_guard_old_before_relative_ave_highlight"),
+	 d3.selectAll(".imperial_guard_old_before_relative_max").attr("class", "imperial_guard_old_before_relative_max_highlight"),
+	d3.selectAll(".barC").filter(function(d) { return d.moe == "639"; }).attr("class", "BarC_highlight"),
+	
+	d3.selectAll(".before4_relative").attr("class", "miniItem_highlight4b_relative");
+
+    }
+	
+function clickImperial_Guard_Young_before(d) {
+	
+	
+	 d3.selectAll(".imperial_guard_young_before_relative").attr("class", "imperial_guard_young_before_relative_highlight"),
+	  d3.selectAll(".imperial_guard_young_before_relative_ave").attr("class", "imperial_guard_young_before_relative_ave_highlight"),
+	   d3.selectAll(".imperial_guard_young_before_relative_max").attr("class", "imperial_guard_young_before_relative_max_highlight"),
+	d3.selectAll(".barC").filter(function(d) { return d.moe == "775"; }).attr("class", "BarC_highlight"),
+
+	d3.selectAll(".before5_relative").attr("class", "miniItem_highlight5b_relative");
+
+    }
+	
+// click on poi_after
+function clickCorps2_after(d) {
+
+	
+	 d3.selectAll(".corps2_after_relative").attr("class", "corps2_after_relative_highlight"),
+	 d3.selectAll(".corps2_after_relative_ave").attr("class", "corps2_after_relative_ave_highlight"),
+	 d3.selectAll(".corps2_after_relative_max").attr("class", "corps2_after_relative_max_highlight"),
+	d3.selectAll(".barD").filter(function(d) { return d.moe3 == "594"; }).attr("class", "BarD_highlight"),
+
+	d3.selectAll(".after1_relative").attr("class", "miniItem_highlight1a_relative");
+
+    }
+
+function clickCorps1_4_after(d) {
+
+	
+	 d3.selectAll(".corps1_4_after_relative").attr("class", "corps1_4_after_relative_highlight"),
+	 d3.selectAll(".corps1_4_after_relative_ave").attr("class", "corps1_4_after_relative_ave_highlight"),
+	 d3.selectAll(".corps1_4_after_relative_max").attr("class", "corps1_4_after_relative_max_highlight"),
+	d3.selectAll(".barD").filter(function(d) { return d.moe3 == "313"; }).attr("class", "BarD_highlight"),
+	
+	d3.selectAll(".after0_relative").attr("class", "miniItem_highlight0a_relative");
+
+    }
+	
+function clickCorps3_5_after(d) {
+	
+	 
+	 d3.selectAll(".corps3_5_after_relative").attr("class", "corps3_5_after_relative_highlight"),
+	  d3.selectAll(".corps3_5_after_relative_max").attr("class", "corps3_5_after_relative_max_highlight"),
+	   d3.selectAll(".corps3_5_after_relative_ave").attr("class", "corps3_5_after_relative_ave_highlight"),
+	d3.selectAll(".barD").filter(function(d) { return d.moe3 == "550"; }).attr("class", "BarD_highlight"),
+	
+	d3.selectAll(".after2_relative").attr("class", "miniItem_highlight2a_relative");
+
+    }
+	
+function clickCorps9_after(d) {
+
+	
+	 d3.selectAll(".corps9_after_relative").attr("class", "corps9_after_relative_highlight"),
+	 d3.selectAll(".corps9_after_relative_max").attr("class", "corps9_after_relative_max_highlight"),
+	 d3.selectAll(".corps9_after_relative_ave").attr("class", "corps9_after_relative_ave_highlight"),
+	d3.selectAll(".barD").filter(function(d) { return d.moe3 == "2750"; }).attr("class", "BarD_highlight"),
+
+	d3.selectAll(".after3_relative").attr("class", "miniItem_highlight3a_relative");
+
+    }
+
+function clickImperial_Guard_Old_after(d) {
+
+	
+	 d3.selectAll(".imperial_guard_old_after_relative").attr("class", "imperial_guard_old_after_relative_highlight"),
+	 d3.selectAll(".imperial_guard_old_after_relative_max").attr("class", "imperial_guard_old_after_relative_max_highlight"),
+	 d3.selectAll(".imperial_guard_old_after_relative_ave").attr("class", "imperial_guard_old_after_relative_ave_highlight"),
+	d3.selectAll(".barD").filter(function(d) { return d.moe3 == "320"; }).attr("class", "BarD_highlight"),
+	
+	d3.selectAll(".after4_relative").attr("class", "miniItem_highlight4a_relative");
+
+    }
+	
+function clickImperial_Guard_Young_after(d) {
+
+
+	 d3.selectAll(".imperial_guard_young_after_relative").attr("class", "imperial_guard_young_after_relative_highlight"),
+	  d3.selectAll(".imperial_guard_young_after_relative_max").attr("class", "imperial_guard_young_after_relative_max_highlight"),
+	   d3.selectAll(".imperial_guard_young_after_relative_ave").attr("class", "imperial_guard_young_after_relative_ave_highlight"),
+	d3.selectAll(".barD").filter(function(d) { return d.moe3 == "388"; }).attr("class", "BarD_highlight"),
+
+	d3.selectAll(".after5_relative").attr("class", "miniItem_highlight5a_relative");
+
+    }
+	
+// click on poi_crossing
+function clickCorps2_crossing(d) {
+	
+	// d3.selectAll(".corps2_crossing").attr("class", "corps2_crossing_highlight"),
+			d3.selectAll(".miniItem0").filter(function(d) { return d.id == "bridge"; }).attr("class", "miniItem_highlight0c");
+
+    }
+
+function clickCorps1_4_crossing(d) {
+
+	// d3.selectAll(".corps1_4_crossing").attr("class", "corps1_4_crossing_highlight"),
+		d3.selectAll(".miniItem4").filter(function(d) { return d.id == "bridge"; }).attr("class", "miniItem_highlight1c");
+
+    }
+	
+function clickCorps3_5_crossing(d) {
+
+	// d3.selectAll(".corps3_5_crossing").attr("class", "corps3_5_crossing_highlight"),
+	d3.selectAll(".miniItem1").filter(function(d) { return d.id == "bridge"; }).attr("class", "miniItem_highlight2c");
+
+    }
+	
+function clickCorps9_crossing(d) {
+
+//	 d3.selectAll(".corps9_crossing").attr("class", "corps9_crossing_highlight"),
+	d3.selectAll(".miniItem5").filter(function(d) { return d.id == "bridge"; }).attr("class", "miniItem_highlight3c");
+
+    }
+
+function clickImperial_Guard_Old_crossing(d) {
+
+//	 d3.selectAll(".imperial_guard_old_crossing").attr("class", "imperial_guard_old_crossing_highlight"),
+	d3.selectAll(".miniItem2").filter(function(d) { return d.id == "bridge"; }).attr("class", "miniItem_highlight4c");
+
+    }
+	
+function clickImperial_Guard_Young_crossing(d) {
+
+	// d3.selectAll(".imperial_guard_young_crossing").attr("class", "imperial_guard_young_crossing_highlight"),
+	d3.selectAll(".miniItem3").filter(function(d) { return d.id == "bridge"; }).attr("class", "miniItem_highlight5c");
+
+    } 
+	
+	
+
+	
+	</script> 
+<br>
+
+<div class="buttons">
+Uncertainty relating to the number of soldiers:<br>
+<input type="radio" name="TimeButtons" onclick='checkMin()' > Minimum Number of Soldiers
+<input type="radio" name="TimeButtons" onclick='checkAve()' checked='checked'> Average Number of Soldiers
+<input type="radio" name="TimeButtons" onclick='checkMax()'> Maximum Number of Soldiers<br>
+</div>
+     <div id="footer">&#169; Lisa Clemens, September 2014</div> 
+	 </div>
+</body>
+
+</html>
