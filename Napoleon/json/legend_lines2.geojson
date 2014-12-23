@@ -1,0 +1,14 @@
+{
+"type": "FeatureCollection",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:EPSG::37001" } },
+                                                                                
+"features": [
+{ "type": "Feature", "properties": { "id": 1, "name": "corps1_4" }, "geometry": { "type": "LineString", "coordinates": [ [ 28.3, 54.199 ], [ 28.26, 54.199 ] ] } },
+{ "type": "Feature", "properties": { "id": 2, "name": "imperial_guard_old" }, "geometry": { "type": "LineString", "coordinates": [ [ 28.3, 54.195 ], [ 28.34, 54.195 ] ] } },
+{ "type": "Feature", "properties": { "id": 3, "name": "corps9" }, "geometry": { "type": "LineString", "coordinates": [ [ 28.3, 54.191 ], [ 28.26, 54.191 ] ] } },
+{ "type": "Feature", "properties": { "id": 4, "name": "corps3_5" }, "geometry": { "type": "LineString", "coordinates": [ [ 28.3, 54.187 ], [ 28.34, 54.187 ] ] } },
+{ "type": "Feature", "properties": { "id": 5, "name": "corps2" }, "geometry": { "type": "LineString", "coordinates": [ [ 28.3, 54.183 ], [ 28.26, 54.183 ] ] } },
+{ "type": "Feature", "properties": { "id": 6, "name": "imperial guard young" }, "geometry": { "type": "LineString", "coordinates": [ [ 28.3, 54.179 ], [ 28.34, 54.179 ] ] } }
+
+]
+}
