@@ -1,0 +1,8 @@
+{
+"type": "FeatureCollection",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:EPSG::37001" } },
+                                                                                
+"features": [
+{ "type": "Feature", "properties": { "id": 2, "name": "Corps IX", "chambray": "18800", "wilson": "13200", "fain": "10000", "gourgaud": "11000", "average": "13250" }, "geometry": { "type": "Point", "coordinates": [ 28.665673313807613, 54.379694164908962 ] } }
+]
+}
