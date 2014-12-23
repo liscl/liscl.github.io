@@ -1,0 +1,9 @@
+{
+"type": "FeatureCollection",
+
+                                                                                
+"features": [
+{ "type": "Feature", "properties": { "osm_id": "242978952", "name": "Barysaw", "type": "city", "population": 145879 }, "geometry": { "type": "Point", "coordinates": [ 28.5560695, 54.2299866 ] } },
+{ "type": "Feature", "properties": { "osm_id": "243020110", "name": "Studienka", "type": "hamlet", "population": null }, "geometry": { "type": "Point", "coordinates": [ 28.35023, 54.35942 ] } }
+]
+}
