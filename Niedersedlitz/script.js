@@ -125,32 +125,7 @@ kinder = d3.json("data/kinder.geojson", function (error, data){
                 }); 
 
 
-dienst = d3.json("data/dienst.geojson", function (error, data){
-        g.append("g")
-        .attr("class", "dienst")
-        .selectAll("path")
-        .data(data.features)
-        .enter()
-        	  .append("path")
-                .attr("class", "poidienst")
-                .attr("d", path)
-                .on("click", clicked)
 
-		// tooltip is defined here:
-                .on("mouseover", function(d) {
-                    div.transition()
-                        .duration(200)
-                        .style("opacity", .9);
-                    div.html(d.properties.title)
-                        .style("left", (d3.event.pageX + 28) + "px")
-                        .style("top", (d3.event.pageY - 28) + "px");
-                   
-                })
-                .on("mouseout", function(d) {
-                    div.transition()
-                        .duration(100)
-                        .style("opacity", 0);
-                }); 
 
 essen = d3.json("data/essen.geojson", function (error, data){
         g.append("g")
@@ -260,7 +235,33 @@ uebernachtung = d3.json("data/uebernachtung.geojson", function (error, data){
                         .duration(100)
                         .style("opacity", 0);
                 });  
+              
+dienst = d3.json("data/dienst.geojson", function (error, data){
+        g.append("g")
+        .attr("class", "dienst")
+        .selectAll("path")
+        .data(data.features)
+        .enter()
+        	  .append("path")
+                .attr("class", "poidienst")
+                .attr("d", path)
+                .on("click", clicked)
 
+		// tooltip is defined here:
+                .on("mouseover", function(d) {
+                    div.transition()
+                        .duration(200)
+                        .style("opacity", .9);
+                    div.html(d.properties.title)
+                        .style("left", (d3.event.pageX + 28) + "px")
+                        .style("top", (d3.event.pageY - 28) + "px");
+                   
+                })
+                .on("mouseout", function(d) {
+                    div.transition()
+                        .duration(100)
+                        .style("opacity", 0);
+                }); 
 
 		 g.append("g")
             .attr("class", "label")
