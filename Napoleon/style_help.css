@@ -1,0 +1,54 @@
+#container {
+ position: absolute;
+ width: 635px;
+ height: auto;
+	float: left;
+	left: 25px;
+	top: 25px;
+    font-family: Trebuchet MS;
+    font-size: 14px;
+    text-align: justify;
+
+}
+
+#link {
+ position: absolute;
+	float: left;
+	left: 550px;
+	font-family: Trebuchet MS;
+    font-size: 14px;
+    text-align: left;
+
+}
+
+#link a:link {
+
+	color: #737373;
+}
+
+#link a:hover {
+	text-decoration: none;
+	color: black;
+}
+
+#link a:visited{
+	color: black;
+}
+
+#Source a:link {
+
+	color: #737373;
+	font-size: 10px;
+}
+
+#Source a:hover {
+	text-decoration: none;
+	color: black;
+	font-size: 10px;
+}
+
+#Source a:visited{
+	color: black;
+	font-size: 10px;
+}
+
