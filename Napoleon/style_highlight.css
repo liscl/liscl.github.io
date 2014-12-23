@@ -1,0 +1,527 @@
+		/*before relative highlight*/ 
+	   .corps2_before_highlight{
+	   stroke-width: 12.1695;
+	   stroke: #3f007d;
+	   fill: #3f007d;
+	   }
+	   .corps1_4_before_highlight{
+	   stroke-width: 3.7125;
+	   stroke: #E75480;
+	   fill: #E75480;
+	   }
+	   .corps3_5_before_highlight{
+	   stroke-width: 6.45;
+	   stroke: #e31a1c;
+	   fill: #e31a1c;
+	   }
+	   .corps9_before_highlight{
+	   stroke-width: 19.875;
+	   stroke: #08519c;
+	   fill: #08519c;
+	   }
+	    .corps9_before_dummy_highlight{
+	   stroke-width: 15;
+	   stroke: #08519c;
+	   fill: #08519c;
+	   }
+	   .imperial_guard_old_before_highlight{
+	   stroke-width: 7.959;
+	   stroke:#138808;
+	   fill:#138808;
+	   }
+	   .imperial_guard_young_before_highlight{
+	   stroke-width: 3.3375;
+	   stroke: #007FFF;
+	   fill: #007FFF;
+	   }
+	 
+	   	/*after_relative highlight*/
+	.corps2_after_highlight{
+	   stroke-width: 6.08475;
+	   stroke: #3f007d;
+	   fill: #3f007d;
+	   }
+	   .corps1_4_after_highlight{
+	   stroke-width: 1.85625;
+	   stroke: #E75480;
+	   fill: #E75480;
+	   }
+	   .corps3_5_after_highlight{
+	   stroke-width: 3.225;
+	   stroke: #e31a1c;
+	   fill: #e31a1c;
+	   }
+	   .corps9_after_highlight{
+	   stroke-width: 9.9375;
+	   stroke:  #08519c;
+	   fill:  #08519c;
+	   }
+	   .imperial_guard_old_after_highlight{
+	   stroke-width: 3.9795;
+	   stroke: #138808;
+	   fill: #138808;
+	   }
+	   .imperial_guard_young_after_highlight{
+	   stroke-width: 1.66875;
+	   stroke: #007FFF;
+	   fill: #007FFF;
+	   }
+		
+	
+	   
+	   
+	  /*before relative highlight*/ 
+	   .corps2_before_relative_highlight{
+	   stroke-width: 10.5;
+	   stroke: #3f007d;
+	   fill: #3f007d;
+	   }
+	   .corps1_4_before_relative_highlight{
+	   stroke-width: 3.3;
+	   stroke: #E75480;
+	   fill: #E75480;
+	   }
+	   .corps3_5_before_relative_highlight{
+	   stroke-width: 4.5;
+	   stroke: #e31a1c;
+	   fill: #e31a1c;
+	   }
+	   .corps9_before_relative_highlight{
+	   stroke-width: 15;
+	   stroke:  #08519c;
+	   fill:  #08519c;
+	   }
+	   .imperial_guard_old_before_relative_highlight{
+	   stroke-width: 7.32;
+	   stroke: #138808;
+	   fill: #138808;
+	   }
+	   .imperial_guard_young_before_relative_highlight{
+	   stroke-width: 2.25;
+	   stroke: #007FFF;
+	   fill: #007FFF;
+	   }
+	 
+	   	/*after_relative highlight*/
+	.corps2_after_relative_highlight{
+	   stroke-width: 5.25;
+	   stroke: #3f007d;
+	   fill: #3f007d;
+	   }
+	   .corps1_4_after_relative_highlight{
+	   stroke-width: 1.65;
+	   stroke: #E75480;
+	   fill: #E75480;
+	   }
+	   .corps3_5_after_relative_highlight{
+	   stroke-width: 2.25;
+	   stroke: #e31a1c;
+	   fill: #e31a1c;
+	   }
+	   .corps9_after_relative_highlight{
+	   stroke-width: 7.5;
+	   stroke:  #08519c;
+	   fill:  #08519c;
+	   }
+	   .imperial_guard_old_after_relative_highlight{
+	   stroke-width: 3.66;
+	   stroke: #138808;
+	   fill: #138808;
+	   }
+	   .imperial_guard_young_after_relative_highlight{
+	   stroke-width: 1.25;
+	   stroke: #007FFF;
+	   fill: #007FFF;
+	   }
+	   
+	    /*before relative highlight*/ 
+	   .corps2_before_relative_max_highlight{
+	   stroke-width: 13.95;
+	   stroke: #3f007d;
+	   fill: #3f007d;
+	   }
+	   .corps1_4_before_relative_max_highlight{
+	   stroke-width: 4.65;
+	   stroke: #E75480;
+	   fill: #E75480;
+	   }
+	   .corps3_5_before_relative_max_highlight{
+	   stroke-width: 8.1;
+	   stroke: #e31a1c;
+	   fill: #e31a1c;
+	   }
+	   .corps9_before_relative_max_highlight{
+	   stroke-width: 28.2;
+	   stroke:  #08519c;
+	   fill:  #08519c;
+	   }
+	   .imperial_guard_old_before_relative_max_highlight{
+	   stroke-width: 8.9175;
+	   stroke:#138808;
+	   fill: #138808;
+	   }
+	   .imperial_guard_young_before_relative_max_highlight{
+	   stroke-width: 4.5;
+	   stroke: #007FFF;
+	   fill: #007FFF;
+	   }
+	 
+	   	/*after_relative highlight*/
+	.corps2_after_relative_max_highlight{
+	   stroke-width: 6.975;
+	   stroke: #3f007d;
+	   fill: #3f007d;
+	   }
+	   .corps1_4_after_relative_max_highlight{
+	   stroke-width: 2.325;
+	   stroke: #E75480;
+	   fill: #E75480;
+	   }
+	   .corps3_5_after_relative_max_highlight{
+	   stroke-width: 4.05;
+	   stroke: #e31a1c;
+	   fill: #e31a1c;
+	   }
+	   .corps9_after_relative_max_highlight{
+	   stroke-width: 14.1;
+	   stroke:  #08519c;
+	   fill:  #08519c;
+	   }
+	   .imperial_guard_old_after_relative_max_highlight{
+	   stroke-width: 4.45875;
+	   stroke: #138808;
+	   fill: #138808;
+	   }
+	   .imperial_guard_young_after_relative_max_highlight{
+	   stroke-width: 2.25;
+	   stroke: #007FFF;
+	   fill: #007FFF;
+	   }
+	   
+	   
+	    .corps2_before_relative_ave_highlight{
+	   stroke-width: 12.1695;
+	   stroke: #3f007d;
+	   fill: #3f007d;
+	   }
+	   .corps1_4_before_relative_ave_highlight{
+	   stroke-width: 3.7125;
+	   stroke: #E75480;
+	   fill: #E75480;
+	   }
+	   .corps3_5_before_relative_ave_highlight{
+	   stroke-width: 6.45;
+	   stroke: #e31a1c;
+	   fill: #e31a1c;
+	   }
+	   .corps9_before_relative_ave_highlight{
+	   stroke-width: 19.875;
+	   stroke:  #08519c;
+	   fill:  #08519c;
+	   }
+	   .imperial_guard_old_before_relative_ave_highlight{
+	   stroke-width: 7.959;
+	   stroke: #138808;
+	   fill: #138808;
+	   }
+	   .imperial_guard_young_before_relative_ave_highlight{
+	   stroke-width: 3.3375;
+	   stroke: #007FFF;
+	   fill: #007FFF;
+	   }
+	 
+	   	/*after_relative highlight*/
+	.corps2_after_relative_ave_highlight{
+	   stroke-width: 6.08475;
+	   stroke: #3f007d;
+	   fill: #3f007d;
+	   }
+	   .corps1_4_after_relative_ave_highlight{
+	   stroke-width: 1.85625;
+	   stroke: #E75480;
+	   fill: #E75480;
+	   }
+	   .corps3_5_after_relative_ave_highlight{
+	   stroke-width: 3.225;
+	   stroke: #e31a1c;
+	   fill: #e31a1c;
+	   }
+	   .corps9_after_relative_ave_highlight{
+	   stroke-width: 9.9375;
+	   stroke:  #08519c;
+	   fill:  #08519c;
+	   }
+	   .imperial_guard_old_after_relative_ave_highlight{
+	   stroke-width: 3.9795;
+	   stroke: #138808;
+	   fill: #138808;
+	   }
+	   .imperial_guard_young_after_relative_ave_highlight{
+	   stroke-width: 1.66875;
+	   stroke: #007FFF;
+	   fill: #007FFF;
+	   }
+	   
+	  
+	   /* corps_crossing style*/
+  
+.corps1_4_crossing_highlight{
+
+   fill: #525252;
+   
+  }
+  
+ .corps2_crossing_highlight{
+
+   fill: #525252;
+   
+  }
+  
+ .corps3_5_crossing_highlight{
+
+   fill: #525252;
+   
+  }
+  
+  .corps9_crossing_highlight{
+
+   fill: #525252;
+   
+  }
+  
+ .imperial_guard_old_crossing_highlight{
+
+   fill: #525252;
+   
+  }
+  
+.imperial_guard_young_crossing_highlight{
+	
+   fill: #525252;
+   
+  }
+ 
+
+ .miniItem_highlight0b {
+			fill: #3f007d;
+			
+		}
+		
+		.miniItem_highlight1b{
+			fill: #E75480;
+			
+		}
+		.miniItem_highlight2b {
+			fill: #e31a1c;
+			
+		}
+		.miniItem_highlight3b {
+			fill:#08519c;
+			
+		}
+		.miniItem_highlight4b{
+			fill: #138808;
+			
+		}
+		.miniItem_highlight5b {
+			fill: #007FFF;
+			
+		}
+
+ .miniItem_highlight0b_relative {
+			fill: #E75480;
+			
+		}
+		
+		.miniItem_highlight1b_relative{
+			fill: #3f007d;
+			
+		}
+		.miniItem_highlight2b_relative {
+			fill: #e31a1c;
+			
+		}
+		.miniItem_highlight3b_relative {
+			fill: #08519c;
+			
+		}
+		.miniItem_highlight4b_relative{
+			fill: #138808;
+			
+		}
+		.miniItem_highlight5b_relative {
+			fill:#007FFF;
+			
+		}
+
+		
+		.miniItem_highlight0c {
+			fill: #525252;
+			
+		}
+		
+		.miniItem_highlight1c{
+			fill: #525252;
+			
+		}
+		.miniItem_highlight2c {
+			fill: #525252;
+		
+		}
+		.miniItem_highlight3c {
+			fill: #525252;
+			
+		}
+		.miniItem_highlight4c{
+			fill: #525252;
+			
+		}
+		.miniItem_highlight5c {
+			fill: #525252;
+			
+		}
+		
+		.miniItem_highlight0a {
+			fill: #3f007d;
+			
+		}
+		
+		.miniItem_highlight1a {
+			fill: #E75480;
+			
+		}
+		.miniItem_highlight2a {
+			fill: #e31a1c;
+			
+		}
+		.miniItem_highlight3a {
+			fill: #08519c;
+			
+		}
+		.miniItem_highlight4a{
+			fill: #138808;
+			
+		}
+		.miniItem_highlight5a {
+			fill: #007FFF;
+			
+		}
+		
+		.miniItem_highlight0a_relative {
+			fill: #E75480;
+			
+		}
+		
+		.miniItem_highlight1a_relative {
+			fill:  #3f007d;
+			
+		}
+		.miniItem_highlight2a_relative {
+			fill: #e31a1c;
+			
+		}
+		.miniItem_highlight3a_relative {
+			fill: #08519c;
+			
+		}
+		.miniItem_highlight4a_relative{
+			fill: #138808;
+		
+		}
+		.miniItem_highlight5a_relative {
+			fill: #007FFF;
+			
+		}
+	
+.BarA_highlight {
+			fill: orange;
+	
+		}
+		
+.BarB_highlight {
+			fill: orange;
+	
+		}
+	
+.BarC_highlight {
+			fill: orange;
+	
+		}
+		
+.BarD_highlight {
+			fill: orange;
+	
+		}
+	
+	
+		.boxblue_highlight0 {
+			fill: #E75480;
+			
+					
+		}
+		
+		.boxblue_highlight1 {
+			fill: #3f007d;
+			
+					
+		}
+		
+		.boxblue_highlight2 {
+			fill: #e31a1c;
+			
+					
+		}
+		
+		.boxblue_highlight3 {
+		fill: #08519c;
+			
+					
+		}
+		
+		.boxblue_highlight4 {
+			fill: #138808;
+			
+					
+		}
+		
+		.boxblue_highlight5 {
+			fill: #007FFF;
+			
+					
+		}
+		
+			.boxred_highlight0 {
+			fill: #E75480;
+			
+					
+		}
+		
+		.boxred_highlight1 {
+			fill: #3f007d;
+			
+					
+		}
+		
+		.boxred_highlight2 {
+			fill: #e31a1c;
+			
+					
+		}
+		
+		.boxred_highlight3 {
+		fill: #08519c;
+			
+					
+		}
+		
+		.boxred_highlight4 {
+			fill: #138808;
+			
+					
+		}
+		
+		.boxred_highlight5 {
+			fill: #007FFF;
+			
+					
+		}
