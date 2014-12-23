@@ -1,0 +1,8 @@
+{
+"type": "FeatureCollection",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:EPSG::37001" } },
+                                                                                
+"features": [
+{ "type": "Feature", "properties": { "id": 3, "name": "Corps I & IV", "chambray": 1200, "wilson": 1550, "fain": 1100, "gourgaud": 1100, "average": 1238 }, "geometry": { "type": "Point", "coordinates": [ 28.299053536758753, 54.384326720738442 ] } }
+]
+}
