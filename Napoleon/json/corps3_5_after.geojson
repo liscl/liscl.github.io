@@ -1,0 +1,8 @@
+{
+"type": "FeatureCollection",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:EPSG::37001" } },
+                                                                                
+"features": [
+{ "type": "Feature", "properties": { "id": 2, "name": "Corps III & V", "chambray": 1500, "wilson": 1700, "fain": 2700, "gourgaud": 2700, "average": 2150 }, "geometry": { "type": "Point", "coordinates": [ 28.251766283162439, 54.403133225282222 ] } }
+]
+}
